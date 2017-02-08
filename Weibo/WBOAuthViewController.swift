@@ -19,6 +19,9 @@ class WBOAuthViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
+        //设置代理
+        webView.delegate = self
+        
         title = "登录新浪微博"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", fontSize: 16, target: self, action: #selector(close), isBack: true)
@@ -56,4 +59,29 @@ class WBOAuthViewController: UIViewController {
             
         }
     }
+}
+
+extension WBOAuthViewController:UIWebViewDelegate{
+    
+    /// webView将要加载请求
+    ///
+    /// - parameter webView:        webView
+    /// - parameter request:        要加载的请求
+    /// - parameter navigationType: 导航类型
+    ///
+    /// - returns: 是否加载 request
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        if request.url?.absoluteString.hasPrefix(WBRedirectURL) == false {
+            return true
+        }
+        
+        if request.url?.query?.hasPrefix("code=") == false {
+            close()
+            return false
+        }
+        
+        return true
+    }
+    
 }

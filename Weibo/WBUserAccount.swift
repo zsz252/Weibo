@@ -7,6 +7,7 @@
 //
 
 import UIKit
+private let accountFile = "useraccount.json"
 
 class WBUserAccount: NSObject {
 
@@ -27,6 +28,20 @@ class WBUserAccount: NSObject {
         return yy_modelDescription()
     }
     
+    override init() {
+        super.init()
+        // 从磁盘加载保存的文件 -> 字典
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let Path = (docDir as NSString).appendingPathComponent(accountFile)
+    
+        guard let data = NSData(contentsOfFile: Path),
+            let dict = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [String:AnyObject]
+        else {
+            return
+        }
+        // 使用字典设置属性值
+        yy_modelSet(with: dict ?? [:])
+    }
     
     /// 1.偏好设置(小)
     /// 2.沙盒 - 归档/plist/json
@@ -44,7 +59,7 @@ class WBUserAccount: NSObject {
         }
         // 3. 写入磁盘
         let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let filePath = (docDir as NSString).appendingPathComponent("useraccount.json")
+        let filePath = (docDir as NSString).appendingPathComponent(accountFile)
         print(filePath)
         
         (data as NSData).write(toFile: filePath, atomically: true)

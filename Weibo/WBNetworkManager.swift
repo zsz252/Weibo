@@ -27,7 +27,14 @@ class WBNetworkManager: AFHTTPSessionManager {
         return accessToken != nil
     }
     //单例模式
-    static let shared = WBNetworkManager()
+    static let shared = { () -> WBNetworkManager in  
+        let instance = WBNetworkManager()
+        
+        //设置响应反序列化支持的数据类型
+        instance.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        
+        return instance
+    }
     
     //负责拼接 token 的网络请求方法
     func tokenRequest(method:WBHTTPMethod = .GET ,URLString:String , parameters: [String:Any]?, completion: @escaping (_ json:Any?,_ isSucess:Bool)->()){

@@ -20,7 +20,7 @@ class WBStatusListViewModel {
         
         let max_id = pullup ? (self.statusList.last?.id) ?? 0 : 0
         
-        WBNetworkManager.shared.statusList(since_id:since_id,max_id: max_id)  { (list, isSucess) in
+        WBNetworkManager.shared().statusList(since_id:since_id,max_id: max_id)  { (list, isSucess) in
             
             //字典转模型
             guard let array = NSArray.yy_modelArray(with: WBStatus.classForCoder(), json: list) as? [WBStatus] else {

@@ -30,7 +30,7 @@ class WBBaseViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         setupUI()
-        WBNetworkManager.shared.userLogon ? loadDate() : ()
+        WBNetworkManager.shared().userLogon ? loadDate() : ()
         // Do any additional setup after loading the view.
     }
 
@@ -63,7 +63,7 @@ extension WBBaseViewController{
     func setupUI(){
         setipNavigationBar()
         
-        WBNetworkManager.shared.userLogon ? setupTableView() : setupVisitorView()
+        WBNetworkManager.shared().userLogon ? setupTableView() : setupVisitorView()
     }
     //设置访客视图
     func setupVisitorView(){

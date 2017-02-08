@@ -18,13 +18,11 @@ enum WBHTTPMethod {
 //网络管理工具类
 class WBNetworkManager: AFHTTPSessionManager {
     
-    //访问令牌
-    var accessToken:String? //= "2.00k1ajjFGYWF9C68df6b25f1SWmjvB"
-    //用户id
-    var uid:String?
+    lazy var userAccount = WBUserAccount()
+    
     //用户登录标记
     var userLogon:Bool{
-        return accessToken != nil
+        return userAccount.access_token != nil
     }
     //单例模式
     static let shared = { () -> WBNetworkManager in  
@@ -39,7 +37,7 @@ class WBNetworkManager: AFHTTPSessionManager {
     //负责拼接 token 的网络请求方法
     func tokenRequest(method:WBHTTPMethod = .GET ,URLString:String , parameters: [String:Any]?, completion: @escaping (_ json:Any?,_ isSucess:Bool)->()){
         
-        guard let token = accessToken else {
+        guard let token = userAccount.access_token else {
             completion(nil, false)
             
             return

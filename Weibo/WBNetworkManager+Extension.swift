@@ -28,7 +28,7 @@ extension WBNetworkManager{
     /// 返回未读微博数量
     func unreadCount(completion: @escaping (_ count:Int)->()){
         
-        guard let uid = uid else {
+        guard let uid = userAccount.uid else {
             return
         }
         
@@ -64,6 +64,8 @@ extension WBNetworkManager{
         //发起网络请求
         request(method: .POST, URLString: urlString, parameters: params) { (json, isSucess) in
             
+            //直接用字典设置 userAccount 的 属性
+            self.userAccount.yy_modelSet(with: (json as? [String:AnyObject]) ?? [:])
         }
     }
     

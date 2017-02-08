@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
 		1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18177A741E4B4E37005DDAC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		18189F801E2D0D19003657D4 /* VisitorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		182D776F1E34D4DC00F147EE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				18177A741E4B4E37005DDAC6 /* Model */,
 				1828BEA91E36366D00C09D79 /* WBNetworkManager.swift */,
 				1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */,
 			);
@@ -507,6 +518,7 @@
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,
+				18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */,
 				1824865D1E3777F90086B40D /* WBStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

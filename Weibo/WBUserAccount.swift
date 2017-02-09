@@ -41,6 +41,17 @@ class WBUserAccount: NSObject {
         }
         // 使用字典设置属性值
         yy_modelSet(with: dict ?? [:])
+        
+        // 判断token是否过期
+        if expiresDate?.compare(Date()) != .orderedDescending{
+            
+            access_token = nil
+            uid = nil
+            
+            //删除用户文件
+            try? FileManager.default.removeItem(atPath: Path)
+            
+        }
     }
     
     /// 1.偏好设置(小)

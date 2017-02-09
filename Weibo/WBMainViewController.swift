@@ -58,7 +58,7 @@ class WBMainViewController: UITabBarController {
     
 }
 
-// MARK: - UITabBarControllerDelegate
+// MARK: - UITabBarControllerDelegate 使中间按钮不会跳转
 extension WBMainViewController:UITabBarControllerDelegate{
     
     /// 将要选择 TabBarItem

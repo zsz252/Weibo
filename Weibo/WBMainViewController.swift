@@ -95,11 +95,11 @@ extension WBMainViewController{
     
     func updateTimer(){
         
-        if WBNetworkManager.shared().userLogon {
+        if WBNetworkManager.shared.userLogon {
             return
         }
         
-        WBNetworkManager.shared().unreadCount { (count) in
+        WBNetworkManager.shared.unreadCount { (count) in
             
             //设置首页的badageNumber
             self.tabBar.items?[0].badgeValue = count > 0 ? "\(count)" : nil

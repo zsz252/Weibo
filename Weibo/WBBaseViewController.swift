@@ -30,10 +30,16 @@ class WBBaseViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         setupUI()
-        WBNetworkManager.shared().userLogon ? loadDate() : ()
-        // Do any additional setup after loading the view.
+        WBNetworkManager.shared.userLogon ? loadDate() : ()
+        
+        // 注册登录成功通知
+        NotificationCenter.default.addObserver(self, selector: #selector(loginSuccess), name: NSNotification.Name(rawValue: WBUserLoginSuccessedNotification), object: nil)
     }
-
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var title: String?{
         didSet{
             navItem.title = title
@@ -47,6 +53,16 @@ class WBBaseViewController: UIViewController {
 }
 // MARK: - 访客视图监听方法
 extension WBBaseViewController{
+    
+    //登录成功处理
+    func loginSuccess(n:Notification){
+        // 更新设置UI
+        // 在访问 view 的 getter 时，如果 view == nil 会调用 loadView -> viewDidLoad
+        view = nil
+        // 注销通知 -> 重新执行 viewDidLoad 会再次注册
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func login(){
         print("用户登录")
         //发送通知
@@ -63,7 +79,7 @@ extension WBBaseViewController{
     func setupUI(){
         setipNavigationBar()
         
-        WBNetworkManager.shared().userLogon ? setupTableView() : setupVisitorView()
+        WBNetworkManager.shared.userLogon ? setupTableView() : setupVisitorView()
     }
     //设置访客视图
     func setupVisitorView(){

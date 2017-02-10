@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import SVProgressHUD
+import AFNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,15 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //取得用户授权显示通知[上方的提示条/声音/BadgeNumber]
-        // 10.0 以上
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (sucess, error) in
-            
-        }
-        // 10.0 以下
-//        let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
-//        application.registerUserNotificationSettings(notifySettings)
         
+        setupAdditions()
         
         window = UIWindow()
         window?.backgroundColor = UIColor.white
@@ -41,6 +36,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+// MARK: - 设置应用程序额外信息
+extension AppDelegate{
+    
+    func setupAdditions(){
+        // 1. 设置 SVProgressHUD 最小解除时间
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+        
+        // 2. 设置网络加载指示器
+        AFNetworkActivityIndicatorManager.shared().isEnabled = true
+        
+        // 3. 设置用户授权通知
+        //取得用户授权显示通知[上方的提示条/声音/BadgeNumber]
+        // 10.0 以上
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]) { (sucess, error) in
+            
+        }
+        // 10.0 以下
+        //        let notifySettings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+        //        application.registerUserNotificationSettings(notifySettings)
+        
+    }
+    
+}
+
+// MARK: - 从服务器加载应用程序信息
 extension AppDelegate{
     
     func loadAppInfo(){

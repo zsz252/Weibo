@@ -37,7 +37,11 @@ class WBNetworkManager: AFHTTPSessionManager {
     //负责拼接 token 的网络请求方法
     func tokenRequest(method:WBHTTPMethod = .GET ,URLString:String , parameters: [String:Any]?, completion: @escaping (_ json:Any?,_ isSucess:Bool)->()){
         
+        // 判断token是否为nil
         guard let token = userAccount.access_token else {
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: nil)
+            
             completion(nil, false)
             
             return
@@ -71,6 +75,7 @@ class WBNetworkManager: AFHTTPSessionManager {
             //针对 403 处理用户token过期
             if (task?.response as? HTTPURLResponse)?.statusCode == 403 {
                 print("token过期")
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: "bad token")
             }
             
             completion(nil, false)

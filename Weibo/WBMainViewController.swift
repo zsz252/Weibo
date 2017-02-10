@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class WBMainViewController: UITabBarController {
     
@@ -41,11 +42,23 @@ class WBMainViewController: UITabBarController {
     //用户登录通知执行
     func userLogin(n:Notification){
         
-        //展现登录视图
-        let vc = UINavigationController(rootViewController: WBOAuthViewController())
+        var when = DispatchTime.now()
         
-        present(vc, animated: true) { 
+        if n.object != nil {
+            SVProgressHUD.setDefaultMaskType(.gradient)
+            SVProgressHUD.showInfo(withStatus: "用户登录已经超时，需重新登录")
+            //修改延迟时间
+            when = DispatchTime.now() + 2
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            SVProgressHUD.setDefaultMaskType(.clear)
+            //展现登录视图
+            let vc = UINavigationController(rootViewController: WBOAuthViewController())
             
+            self.present(vc, animated: true) {
+                
+            }
         }
     }
     

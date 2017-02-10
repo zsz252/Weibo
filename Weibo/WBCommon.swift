@@ -19,3 +19,5 @@ let WBRedirectURL = "http://baidu.com"
 //MARK : - 微博全局通知定义
 //用户需要通知类型
 let WBUserShouldLoginNotification = "WBUserShouldLoginNotification"
+//用户登录成功通知
+let WBUserLoginSuccessedNotification = "WBUserLoginSuccessedNotification"

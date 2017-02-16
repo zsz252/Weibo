@@ -47,6 +47,24 @@ extension WBNetworkManager{
 }
 
 
+// MARK: - 微博用户信息
+extension WBNetworkManager{
+    
+    
+    /// 加载用户信息
+    func loadUserInfo(completion: @escaping (_ dict: [String:AnyObject])->()){
+        
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        let params = ["uid":userAccount.uid]
+        
+        tokenRequest(URLString: urlString, parameters: params) { (json, isSuccess) in
+            completion(json as? [String:AnyObject] ?? [:])
+        }
+        
+    }
+}
+
 // MARK: - OAuth相关方法
 extension WBNetworkManager{
     
@@ -71,10 +89,18 @@ extension WBNetworkManager{
             self.userAccount.yy_modelSet(with: (json as? [String:AnyObject]) ?? [:])
             
             print(self.userAccount)
-            self.userAccount.saveAccount()
+            //加载用户信息
+            self.loadUserInfo(completion: { (dict) in
+                print(dict)
+                // 使用用户信息字典 设置用户账户信息
+                self.userAccount.yy_modelSet(withJSON: dict)
+                // 保存用户模型
+                self.userAccount.saveAccount()
+                //完成回调
+                completion(isSucess)
+            })
             
-            //完成回调
-            completion(isSucess)
+
         }
     }
     

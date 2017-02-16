@@ -93,5 +93,31 @@ extension WBHomeViewController{
         super.setupTableView()
         
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
+        
+        setupNavTitle()
     }
+    
+    // 设置导航栏按钮
+    func setupNavTitle(){
+        
+        let button = UIButton()
+        button.setTitleColor(UIColor.darkGray, for: .normal)
+        button.setTitleColor(UIColor.black, for: .highlighted)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        button.setTitle("22", for: .normal)
+        
+        button.setImage(UIImage(named:"down.png"), for: .normal)
+        button.setImage(UIImage(named:"up.png"), for: .selected)
+        button.sizeToFit()
+        
+        navItem.titleView = button
+        
+        button.addTarget(self, action: #selector(clickTitleButton), for: .touchUpInside)
+    }
+    
+    func clickTitleButton(btn : UIButton){
+        //设置选中状态
+        btn.isSelected = !btn.isSelected
+    }
+    
 }

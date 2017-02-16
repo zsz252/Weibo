@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */; };
 		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
+		18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */; };
 		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
 		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
+		18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
 		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */,
 				18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */,
+				18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */,
 			);
 			name = NewFeature;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
+				18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */,
 				182E86991E28CB55002DED68 /* Assets.xcassets in Resources */,
 				18E265371E2E6A2400A5E1C2 /* main.json in Resources */,
 				182E86971E28CB55002DED68 /* Main.storyboard in Resources */,

@@ -50,15 +50,19 @@ extension WBNetworkManager{
 // MARK: - 微博用户信息
 extension WBNetworkManager{
     
-    
     /// 加载用户信息
     func loadUserInfo(completion: @escaping (_ dict: [String:AnyObject])->()){
         
+        guard let uid = userAccount.uid else {
+            return
+        }
+        
         let urlString = "https://api.weibo.com/2/users/show.json"
         
-        let params = ["uid":userAccount.uid]
-        
+        let params = ["uid": uid]
+        print(userAccount)
         tokenRequest(URLString: urlString, parameters: params) { (json, isSuccess) in
+            print(json)
             completion(json as? [String:AnyObject] ?? [:])
         }
         
@@ -88,14 +92,13 @@ extension WBNetworkManager{
             //直接用字典设置 userAccount 的 属性
             self.userAccount.yy_modelSet(with: (json as? [String:AnyObject]) ?? [:])
             
-            print(self.userAccount)
             //加载用户信息
             self.loadUserInfo(completion: { (dict) in
-                print(dict)
                 // 使用用户信息字典 设置用户账户信息
-                self.userAccount.yy_modelSet(withJSON: dict)
+                self.userAccount.yy_modelSet(withJSON: dict )
                 // 保存用户模型
                 self.userAccount.saveAccount()
+                print(self.userAccount)
                 //完成回调
                 completion(isSucess)
             })

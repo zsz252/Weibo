@@ -104,7 +104,7 @@ extension WBHomeViewController{
         button.setTitleColor(UIColor.darkGray, for: .normal)
         button.setTitleColor(UIColor.black, for: .highlighted)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
-        button.setTitle("22", for: .normal)
+        button.setTitle(WBNetworkManager.shared.userAccount.screen_name, for: .normal)
         
         button.setImage(UIImage(named:"down.png"), for: .normal)
         button.setImage(UIImage(named:"up.png"), for: .selected)

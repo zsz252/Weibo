@@ -69,7 +69,7 @@ class WBNetworkManager: AFHTTPSessionManager {
         let success = { (task:URLSessionDataTask,json:Any?)->() in
             completion(json, true)
         }
-        
+        print(baseURL)
         let failure = { (task:URLSessionDataTask?,error:Error)->() in
             
             //针对 403 处理用户token过期

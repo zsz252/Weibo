@@ -45,7 +45,7 @@ class WBUserAccount: NSObject {
             return
         }
         // 使用字典设置属性值
-        //yy_modelSet(with: dict ?? [:])
+        yy_modelSet(with: dict ?? [:])
         
         // 判断token是否过期
         if expiresDate?.compare(Date()) != .orderedDescending{

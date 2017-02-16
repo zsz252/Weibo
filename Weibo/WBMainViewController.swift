@@ -147,7 +147,19 @@ extension WBMainViewController{
     }
     
     var isNewVersion: Bool{
-        return false
+        let path = "version"
+        // 1. 取当前的版本号
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        // 2. 取保存在 Document 目录中的之前版本号
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let filePath = (docDir as NSString).appendingPathComponent(path)
+        
+        let lastVersion = (try? String(contentsOfFile: filePath)) ?? ""
+        print(filePath)
+        // 3. 将当前版本号保存
+        try? currentVersion.write(toFile: filePath, atomically: true, encoding: .utf8)
+        // 4. 判断版本号
+        return currentVersion != lastVersion
     }
 }
 

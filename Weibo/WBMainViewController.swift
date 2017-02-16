@@ -23,6 +23,8 @@ class WBMainViewController: UITabBarController {
         setUpComposeButton()
         setupTimer()
         
+        //新特性视图
+        setupNewfeatureView()
         //设置代理
         delegate = self
         
@@ -120,6 +122,32 @@ extension WBMainViewController{
             UIApplication.shared.applicationIconBadgeNumber = count
         }
         
+    }
+}
+
+
+// MARK: - 新特性视图
+extension WBMainViewController{
+    
+    func setupNewfeatureView(){
+        
+        // 0. 判断是否登录
+        if !WBNetworkManager.shared.userLogon{
+            return
+        }
+        
+        // 1. 检测版本是否更新
+        
+        // 2. 如果更新，显示新特性，否则显示欢迎
+        let v = isNewVersion ? WBNewFeatureView() : WBWelcomeView()
+        // 3. 添加视图
+        v.frame = view.bounds
+        
+        view.addSubview(v)
+    }
+    
+    var isNewVersion: Bool{
+        return false
     }
 }
 

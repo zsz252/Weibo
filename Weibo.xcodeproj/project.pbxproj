@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */; };
+		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
 		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
+		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18163AF61E55EC60005CEEB3 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */,
+				18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */,
+			);
+			name = NewFeature;
+			sourceTree = "<group>";
+		};
 		18177A741E4B4E37005DDAC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +259,7 @@
 		189875A31E28CF1C00BDD953 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18163AF61E55EC60005CEEB3 /* NewFeature */,
 				18189F801E2D0D19003657D4 /* VisitorView */,
 				189875A81E28CFF700BDD953 /* WBMainViewController.swift */,
 				189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */,
@@ -513,8 +527,10 @@
 				189875B51E28D12100BDD953 /* WBProfileViewController.swift in Sources */,
 				189875AF1E28D0EE00BDD953 /* WBHomeViewController.swift in Sources */,
 				1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */,
+				18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */,
 				189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */,
 				189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */,
+				18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */,
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,

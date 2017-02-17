@@ -12,29 +12,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-G0-V8K">
-                    <frame key="frameInset" minX="145" minY="412" width="85" height="85"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ukz-s1-li8">
-                            <frame key="frameInset" width="85" height="85"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZFu-2N-zpO">
-                                    <frame key="frameInset" width="85" height="85"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="85" id="WSl-Yz-upH"/>
-                                        <constraint firstAttribute="width" constant="85" id="yiV-LP-l6C"/>
-                                    </constraints>
-                                </imageView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="ZFu-2N-zpO" secondAttribute="bottom" constant="160" id="fNj-7x-CDm"/>
-                            </constraints>
-                        </stackView>
-                    </subviews>
-                </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go9-8B-9cy">
-                    <frame key="frameInset" minX="152" minY="518" width="70" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="UeE-pz-mfk">
+                    <frame key="frameInset" minX="85" minY="364" width="184" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="12r-fw-Ele"/>
+                        <constraint firstAttribute="height" constant="85" id="qmk-l9-NzH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="欢迎回来" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvm-V0-ZlS">
+                    <frame key="frameInset" minX="142" minY="521" width="84" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -42,13 +28,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xRz-G0-V8K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vzb-Wr-6EA"/>
+                <constraint firstItem="gvm-V0-ZlS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AzR-6y-cdl"/>
+                <constraint firstAttribute="bottom" secondItem="gvm-V0-ZlS" secondAttribute="bottom" constant="125" id="I1M-gf-BQ8"/>
+                <constraint firstItem="gvm-V0-ZlS" firstAttribute="top" secondItem="UeE-pz-mfk" secondAttribute="bottom" constant="29" id="SLy-kN-LbK"/>
+                <constraint firstItem="UeE-pz-mfk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uqt-Wu-x5f"/>
             </constraints>
             <connections>
-                <outlet property="bottomCons" destination="fNj-7x-CDm" id="flM-5n-nue"/>
-                <outlet property="iconView" destination="ZFu-2N-zpO" id="B4W-Dz-f9I"/>
-                <outlet property="tipLable" destination="Go9-8B-9cy" id="fpY-t3-ZaR"/>
+                <outlet property="bottomCons" destination="I1M-gf-BQ8" id="6tb-sa-lIX"/>
+                <outlet property="iconView" destination="UeE-pz-mfk" id="X2S-17-52E"/>
+                <outlet property="tipLable" destination="gvm-V0-ZlS" id="Ci4-6Q-zQg"/>
             </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="profile" width="31" height="32"/>
+    </resources>
 </document>

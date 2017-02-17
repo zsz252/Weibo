@@ -62,6 +62,8 @@ class WBWelcomeView: UIView {
             }) { (_) in
                 UIView.animate(withDuration: 1.0, animations: { 
                     self.tipLable.alpha = 1
+                    }, completion: { (_) in
+                        self.removeFromSuperview()
                 })
         }
     }

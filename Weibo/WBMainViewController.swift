@@ -139,7 +139,7 @@ extension WBMainViewController{
         // 1. 检测版本是否更新
         
         // 2. 如果更新，显示新特性，否则显示欢迎
-        let v = isNewVersion ? WBNewFeatureView() : WBWelcomeView.welcomeView()
+        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBWelcomeView.welcomeView()
         // 3. 添加视图
         v.frame = view.bounds
         
@@ -159,7 +159,7 @@ extension WBMainViewController{
         // 3. 将当前版本号保存
         try? currentVersion.write(toFile: filePath, atomically: true, encoding: .utf8)
         // 4. 判断版本号
-        return currentVersion != lastVersion
+        return true//currentVersion != lastVersion
     }
 }
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WBNewFeatureView" customModule="Weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-dd-ItW"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-du-rt3">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="进入微博">
+                        <color key="titleColor" red="1" green="0.37488724150000002" blue="0.054847343719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="enterStauts:" destination="iN0-l3-epB" eventType="touchUpInside" id="LAr-OZ-7Ni"/>
+                    </connections>
+                </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="2Dg-Sm-8qQ">
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.37488724150000002" blue="0.054847343719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EjX-dd-ItW" secondAttribute="trailing" id="Jjx-pb-IrV"/>
+                <constraint firstAttribute="bottom" secondItem="2Dg-Sm-8qQ" secondAttribute="bottom" constant="110" id="S1C-Iw-uMF"/>
+                <constraint firstItem="EjX-dd-ItW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UKD-e4-Tc0"/>
+                <constraint firstItem="2Dg-Sm-8qQ" firstAttribute="top" secondItem="Vjd-du-rt3" secondAttribute="bottom" constant="8" id="W2h-Pp-Ai9"/>
+                <constraint firstItem="EjX-dd-ItW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zag-jc-5dk"/>
+                <constraint firstAttribute="bottom" secondItem="EjX-dd-ItW" secondAttribute="bottom" id="fz0-F0-7GS"/>
+                <constraint firstItem="Vjd-du-rt3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hrh-jK-lBC"/>
+                <constraint firstItem="2Dg-Sm-8qQ" firstAttribute="centerX" secondItem="Vjd-du-rt3" secondAttribute="centerX" id="jNu-YE-LjJ"/>
+            </constraints>
+            <connections>
+                <outlet property="enterButton" destination="Vjd-du-rt3" id="7P7-OB-3Qa"/>
+                <outlet property="pageControl" destination="2Dg-Sm-8qQ" id="gTQ-gx-NTS"/>
+                <outlet property="scrollView" destination="EjX-dd-ItW" id="arM-4b-Ycw"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="17.5"/>
+        </view>
+    </objects>
+</document>

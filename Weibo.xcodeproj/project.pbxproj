@@ -25,6 +25,7 @@
 		182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E869A1E28CB55002DED68 /* LaunchScreen.storyboard */; };
 		182E86A71E28CB55002DED68 /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E86A61E28CB55002DED68 /* WeiboTests.swift */; };
 		182E86B21E28CB55002DED68 /* WeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E86B11E28CB55002DED68 /* WeiboUITests.swift */; };
+		186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186E4CB41E574BF200210405 /* WBNewFeatureView.xib */; };
 		189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875A81E28CFF700BDD953 /* WBMainViewController.swift */; };
 		189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */; };
 		189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */; };
@@ -80,6 +81,7 @@
 		182E86AD1E28CB55002DED68 /* WeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182E86B11E28CB55002DED68 /* WeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboUITests.swift; sourceTree = "<group>"; };
 		182E86B31E28CB55002DED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186E4CB41E574BF200210405 /* WBNewFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBNewFeatureView.xib; sourceTree = "<group>"; };
 		189875A81E28CFF700BDD953 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationViewController.swift; sourceTree = "<group>"; };
 		189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */,
 				18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */,
 				18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */,
+				186E4CB41E574BF200210405 /* WBNewFeatureView.xib */,
 			);
 			name = NewFeature;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
+				186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */,
 				18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */,
 				182E86991E28CB55002DED68 /* Assets.xcassets in Resources */,
 				18E265371E2E6A2400A5E1C2 /* main.json in Resources */,

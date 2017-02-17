@@ -26,10 +26,13 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ZFu-2N-zpO" secondAttribute="bottom" constant="160" id="fNj-7x-CDm"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go9-8B-9cy">
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go9-8B-9cy">
                     <frame key="frameInset" minX="152" minY="518" width="70" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,6 +44,11 @@
             <constraints>
                 <constraint firstItem="xRz-G0-V8K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vzb-Wr-6EA"/>
             </constraints>
+            <connections>
+                <outlet property="bottomCons" destination="fNj-7x-CDm" id="flM-5n-nue"/>
+                <outlet property="iconView" destination="ZFu-2N-zpO" id="B4W-Dz-f9I"/>
+                <outlet property="tipLable" destination="Go9-8B-9cy" id="fpY-t3-ZaR"/>
+            </connections>
         </view>
     </objects>
 </document>

@@ -86,7 +86,7 @@ extension WBHomeViewController{
     override func setupUI() {
         super.setupUI()
         
-        tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellId)
+        tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func setupTableView() {

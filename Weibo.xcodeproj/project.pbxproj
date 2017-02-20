@@ -11,6 +11,8 @@
 		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
 		18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */; };
 		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
+		181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */; };
+		181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
 		1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */; };
@@ -61,6 +63,8 @@
 		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
 		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
+		181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCellTableViewCell.swift; sourceTree = "<group>"; };
+		181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusCellTableViewNormalCell.xib; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
@@ -140,6 +144,15 @@
 				18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		181871331E5B3967003C70AC /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */,
+				181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */,
+			);
+			name = StatusCell;
 			sourceTree = "<group>";
 		};
 		18189F801E2D0D19003657D4 /* VisitorView */ = {
@@ -280,6 +293,7 @@
 		189875A41E28CF2400BDD953 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				181871331E5B3967003C70AC /* StatusCell */,
 				189875AE1E28D0EE00BDD953 /* WBHomeViewController.swift */,
 			);
 			name = Home;
@@ -445,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */,
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
 				186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */,
 				18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */,
@@ -527,6 +542,7 @@
 				189875B31E28D11600BDD953 /* WBDiscoverViewController.swift in Sources */,
 				1828BEAA1E36366D00C09D79 /* WBNetworkManager.swift in Sources */,
 				189875B11E28D10A00BDD953 /* WBMessageViewController.swift in Sources */,
+				181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */,
 				18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */,
 				1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */,
 				1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */,

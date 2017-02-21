@@ -114,7 +114,7 @@ extension WBMainViewController{
     
     func updateTimer(){
         
-        if WBNetworkManager.shared.userLogon {
+        if !WBNetworkManager.shared.userLogon {
             return
         }
         

@@ -9,6 +9,19 @@
 import UIKit
 
 class WBStatusCellTableViewCell: UITableViewCell {
+    
+    // 视图模型
+    var viewModel:WBStatusViewModel?{
+        didSet{
+            //微博文本
+            statusLable.text = viewModel?.status.text
+            //姓名
+            nameLable.text = viewModel?.status.user?.screen_name
+            //设置会员图标
+            memberIconView.image = viewModel?.memberIcon
+        }
+    }
+    
     /// 头像
     @IBOutlet weak var iconView: UIImageView!
     /// 姓名

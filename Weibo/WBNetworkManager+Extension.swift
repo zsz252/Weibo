@@ -40,6 +40,7 @@ extension WBNetworkManager{
             
             let dict = json as? [String:AnyObject]
             let count = dict?["status"] as? Int ?? 0
+            print("有\(count)条消息未读")
             completion(count)
     
         }

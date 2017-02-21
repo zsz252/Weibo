@@ -7,12 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
 class WBStatusViewModel: CustomStringConvertible{
     
     //微博模型
     var status:WBStatus
     
+    //会员图标
+    var memberIcon:UIImage?
     
     /// 构造函数
     ///
@@ -21,6 +23,12 @@ class WBStatusViewModel: CustomStringConvertible{
     /// - returns: 微博的视图模型
     init(model:WBStatus) {
         self.status = model
+        
+        if (model.user?.mbrank)! > 0 && (model.user?.mbrank)! < 7{
+            let imageName = "vip"
+            
+            memberIcon = UIImage(named: imageName)
+        }
     }
     
     var description: String{

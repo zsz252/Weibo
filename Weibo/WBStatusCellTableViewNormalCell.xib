@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="447" height="359"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jd2-1A-cv6" id="kss-ro-wJJ">
-                <frame key="frameInset" width="447" height="358"/>
+                <frame key="frameInset" width="447" height="358.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-Eh-ftb" userLabel="顶部分隔视图">
@@ -58,7 +58,7 @@
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="centerY" secondItem="Dq0-1t-Aeo" secondAttribute="centerY" id="6T5-oz-IFs"/>
                     <constraint firstItem="I3z-HF-A7Z" firstAttribute="top" secondItem="kss-ro-wJJ" secondAttribute="top" constant="12" id="FAd-YW-Tzt"/>
                     <constraint firstItem="I3z-HF-A7Z" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" constant="11" id="OA0-wL-EiN"/>
-                    <constraint firstItem="5jU-QW-xcj" firstAttribute="centerX" secondItem="I3z-HF-A7Z" secondAttribute="trailing" id="PdB-jz-GbH"/>
+                    <constraint firstItem="5jU-QW-xcj" firstAttribute="centerX" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="-4" id="PdB-jz-GbH"/>
                     <constraint firstItem="30a-ND-gUD" firstAttribute="top" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="11" id="QYY-n4-Dva"/>
                     <constraint firstAttribute="trailing" secondItem="VPL-Eh-ftb" secondAttribute="trailing" id="TtG-QT-sdI"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="30a-ND-gUD" secondAttribute="trailing" constant="11" id="Uuo-cS-DqT"/>
@@ -67,7 +67,7 @@
                     <constraint firstItem="Dq0-1t-Aeo" firstAttribute="leading" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="11" id="b5k-AM-4yb"/>
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="leading" secondItem="Dq0-1t-Aeo" secondAttribute="trailing" constant="4" id="bjc-pp-wsQ"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="30a-ND-gUD" secondAttribute="bottom" constant="12" id="gHf-EA-6a5"/>
-                    <constraint firstItem="5jU-QW-xcj" firstAttribute="centerY" secondItem="I3z-HF-A7Z" secondAttribute="bottom" id="mAL-pB-IbW"/>
+                    <constraint firstItem="5jU-QW-xcj" firstAttribute="centerY" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="-4" id="mAL-pB-IbW"/>
                     <constraint firstItem="E6V-PQ-yVC" firstAttribute="centerY" secondItem="SGd-21-Xgi" secondAttribute="centerY" id="nmf-Mw-Dcz"/>
                     <constraint firstItem="SGd-21-Xgi" firstAttribute="bottom" secondItem="I3z-HF-A7Z" secondAttribute="bottom" id="oYZ-qa-SlG"/>
                     <constraint firstItem="E6V-PQ-yVC" firstAttribute="leading" secondItem="SGd-21-Xgi" secondAttribute="trailing" constant="8" id="pfQ-dm-iRk"/>

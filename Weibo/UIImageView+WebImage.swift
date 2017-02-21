@@ -10,12 +10,12 @@ import SDWebImage
 
 extension UIImageView{
     
-    
     /// 隔离 SDWebImage 设置图像函数
     ///
     /// - parameter urlString:        urlString
     /// - parameter placeholderImage: 占位图像
-    func wb_setImage(urlString:String,placeholderImage:UIImage?){
+    /// - parameter isAvatar:         是否是头像
+    func wb_setImage(urlString:String,placeholderImage:UIImage?,isAvatar:Bool = false){
         
         // 处理URL
         guard let url = URL(string: urlString) else{
@@ -25,8 +25,11 @@ extension UIImageView{
             return
         }
         
-        sd_setImage(with: url, placeholderImage: placeholderImage, options: [], progress: nil) { (image, _, _, _) in
+        sd_setImage(with: url, placeholderImage: placeholderImage, options: [], progress: nil) { [weak self] (image, _, _, _) in
             
+            if isAvatar{
+                self?.image = image?.wb_avatarImage(size: self?.bounds.size)
+            }
         }
         
     }

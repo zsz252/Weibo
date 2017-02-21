@@ -22,7 +22,7 @@ class WBStatusCellTableViewCell: UITableViewCell {
             //设置认证图标
             vipIconView.image = viewModel?.vipIcon
             //用户头像
-            iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"))
+            iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"),isAvatar: true)
         }
     }
     

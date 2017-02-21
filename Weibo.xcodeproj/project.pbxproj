@@ -16,6 +16,7 @@
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
 		1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */; };
+		181A65A21E5C012C001B3D6C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */; };
 		1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */; };
 		1824865D1E3777F90086B40D /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865C1E3777F80086B40D /* WBStatus.swift */; };
 		1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */; };
@@ -71,6 +72,7 @@
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		1824865C1E3777F80086B40D /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				189875B91E28E36800BDD953 /* Bundle+Extensions.swift */,
 				1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */,
 				182A4A1D1E5BF2360000676E /* UIImageView+WebImage.swift */,
+				181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				189875BA1E28E36800BDD953 /* Bundle+Extensions.swift in Sources */,
 				189875B51E28D12100BDD953 /* WBProfileViewController.swift in Sources */,
 				182A4A1C1E5BDE5B0000676E /* WBStatusViewModel.swift in Sources */,
+				181A65A21E5C012C001B3D6C /* UIImage+Extension.swift in Sources */,
 				189875AF1E28D0EE00BDD953 /* WBHomeViewController.swift in Sources */,
 				1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */,
 				18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */,

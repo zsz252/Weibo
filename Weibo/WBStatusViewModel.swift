@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WBStatusViewModel{
+class WBStatusViewModel: CustomStringConvertible{
     
     //微博模型
     var status:WBStatus
@@ -21,5 +21,9 @@ class WBStatusViewModel{
     /// - returns: 微博的视图模型
     init(model:WBStatus) {
         self.status = model
+    }
+    
+    var description: String{
+        return status.description
     }
 }

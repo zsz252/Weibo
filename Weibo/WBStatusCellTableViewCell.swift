@@ -19,6 +19,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
             nameLable.text = viewModel?.status.user?.screen_name
             //设置会员图标
             memberIconView.image = viewModel?.memberIcon
+            //设置认证图标
+            vipIconView.image = viewModel?.vipIcon
         }
     }
     

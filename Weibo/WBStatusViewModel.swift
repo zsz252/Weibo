@@ -15,6 +15,8 @@ class WBStatusViewModel: CustomStringConvertible{
     
     //会员图标
     var memberIcon:UIImage?
+    //认证类型
+    var vipIcon:UIImage?
     
     /// 构造函数
     ///
@@ -28,6 +30,10 @@ class WBStatusViewModel: CustomStringConvertible{
             let imageName = "vip"
             
             memberIcon = UIImage(named: imageName)
+        }
+        
+        if model.user?.verified_type != -1 {
+            vipIcon = UIImage(named: "avatar_vip")
         }
     }
     

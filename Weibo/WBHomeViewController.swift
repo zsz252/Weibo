@@ -72,9 +72,9 @@ extension WBHomeViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //1.取cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCellTableViewCell
         //2.设置cell
-        cell.textLabel?.text = listViewModel.statusList[indexPath.row].text
+        cell.statusLable.text = listViewModel.statusList[indexPath.row].text
         //3.返回cell
         return cell
     }
@@ -86,13 +86,23 @@ extension WBHomeViewController{
     override func setupUI() {
         super.setupUI()
         
-        tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func setupTableView() {
         super.setupTableView()
         
+        // 设置导航栏按钮
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
+        
+        // 注册原型 cell
+        tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
+        
+        // 设置行高
+        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.estimatedRowHeight = 300
+        
+        // 取消底部分割线
+        tableView?.separatorStyle = .none
         
         setupNavTitle()
     }

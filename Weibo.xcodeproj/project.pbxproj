@@ -21,6 +21,7 @@
 		1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */; };
 		182663E61E38F81900942F71 /* WBCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182663E51E38F81900942F71 /* WBCommon.swift */; };
 		1828BEAA1E36366D00C09D79 /* WBNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828BEA91E36366D00C09D79 /* WBNetworkManager.swift */; };
+		182A4A1A1E5BD9CA0000676E /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A4A191E5BD9C90000676E /* WBUser.swift */; };
 		182E86921E28CB55002DED68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E86911E28CB55002DED68 /* AppDelegate.swift */; };
 		182E86971E28CB55002DED68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182E86951E28CB55002DED68 /* Main.storyboard */; };
 		182E86991E28CB55002DED68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182E86981E28CB55002DED68 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
 		182663E51E38F81900942F71 /* WBCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCommon.swift; sourceTree = "<group>"; };
 		1828BEA91E36366D00C09D79 /* WBNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkManager.swift; sourceTree = "<group>"; };
+		182A4A191E5BD9C90000676E /* WBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
 		182E868E1E28CB55002DED68 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182E86911E28CB55002DED68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		182E86961E28CB55002DED68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				1824865C1E3777F80086B40D /* WBStatus.swift */,
+				182A4A191E5BD9C90000676E /* WBUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,
+				182A4A1A1E5BD9CA0000676E /* WBUser.swift in Sources */,
 				18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */,
 				1824865D1E3777F90086B40D /* WBStatus.swift in Sources */,
 			);

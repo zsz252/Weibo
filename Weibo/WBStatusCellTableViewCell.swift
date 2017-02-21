@@ -21,6 +21,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
             memberIconView.image = viewModel?.memberIcon
             //设置认证图标
             vipIconView.image = viewModel?.vipIcon
+            //用户头像
+            iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"))
         }
     }
     

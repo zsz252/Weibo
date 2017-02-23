@@ -60,21 +60,13 @@ class WBStatusViewModel: CustomStringConvertible{
     /// - parameter count: 配图数量
     ///
     /// - returns: 配图视图的大小
-    func calcPictureViewSize(count:Int) -> CGSize {
-        if count == 0{
+    func calcPictureViewSize(count:Int?) -> CGSize {
+        if count == 0 && count == nil{
             return CGSize()
         }
         
-        // 计算配图视图的宽度
-        let WBStatusPictureViewOutterMargin:CGFloat = 12
-        // 配图视图内部图像的间距
-        let WBStatusPictureViewInnerMargin:CGFloat = 3
-        // 屏幕的宽度
-        let WBStatusPictureViewWidth = UIScreen.main.bounds.size.width - 2 * WBStatusPictureViewInnerMargin
-        // 计算宽度
-        let WBStatusPictureItemWidth = (WBStatusPictureViewWidth - 2 * WBStatusPictureViewInnerMargin) / 3
         //  计算行数
-        let row = (count - 1) / 3 + 1
+        let row = (count! - 1) / 3 + 1
         // 根据行数算高度
         let height = WBStatusPictureViewOutterMargin + CGFloat(row) * WBStatusPictureItemWidth + CGFloat(row - 1) * WBStatusPictureViewInnerMargin
         

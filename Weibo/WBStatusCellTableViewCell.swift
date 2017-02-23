@@ -23,6 +23,7 @@ class WBStatusCellTableViewCell: UITableViewCell {
             vipIconView.image = viewModel?.vipIcon
             //用户头像
             iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"),isAvatar: true)
+            tarBar.viewModel = viewModel
         }
     }
     
@@ -40,7 +41,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
     @IBOutlet weak var vipIconView: UIImageView!
     /// 微博正文
     @IBOutlet weak var statusLable: UILabel!
-
+    // 底部工具栏
+    @IBOutlet weak var tarBar: WBStatusTarbar!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -17,6 +17,7 @@
 		1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */; };
 		1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */; };
 		181A65A21E5C012C001B3D6C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */; };
+		181ABD011E5E72B00045BC5C /* WBStatusTarbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */; };
 		1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */; };
 		1824865D1E3777F90086B40D /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865C1E3777F80086B40D /* WBStatus.swift */; };
 		1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */; };
@@ -73,6 +74,7 @@
 		1818C2AD1E2BCD3F005C7289 /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		1818C2AF1E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusTarbar.swift; sourceTree = "<group>"; };
 		1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		1824865C1E3777F80086B40D /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */,
 				181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */,
+				181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */,
 			);
 			name = StatusCell;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */,
 				189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */,
 				189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */,
+				181ABD011E5E72B00045BC5C /* WBStatusTarbar.swift in Sources */,
 				18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */,
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,

@@ -12,9 +12,9 @@ class WBStatusTarbar: UIView {
     
     var viewModel:WBStatusViewModel?{
         didSet{
-            retweetedButton.setTitle("\(viewModel?.status.reposts_count)", for: .normal)
-            commentButton.setTitle("\(viewModel?.status.comments_count)", for: .normal)
-            likeButton.setTitle("\(viewModel?.status.attitudes_count)", for: .normal)
+            retweetedButton.setTitle(viewModel?.retweetedStr, for: .normal)
+            commentButton.setTitle(viewModel?.commentStr, for: .normal)
+            likeButton.setTitle(viewModel?.likeStr, for: .normal)
         }
     }
     

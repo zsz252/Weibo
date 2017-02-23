@@ -28,6 +28,6 @@ let WBStatusPictureViewOutterMargin = CGFloat(12)
 // 配图视图内部图像的间距
 let WBStatusPictureViewInnerMargin = CGFloat(3)
 // 屏幕的宽度
-let WBStatusPictureViewWidth = UIScreen.main.bounds.size.width - 2 * WBStatusPictureViewInnerMargin
+let WBStatusPictureViewWidth = UIScreen.main.bounds.size.width - 2 * WBStatusPictureViewOutterMargin
 // 计算宽度
 let WBStatusPictureItemWidth = (WBStatusPictureViewWidth - 2 * WBStatusPictureViewInnerMargin) / 3

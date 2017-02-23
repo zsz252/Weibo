@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="359" id="jd2-1A-cv6" customClass="WBStatusCellTableViewCell" customModule="Weibo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="447" height="359"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="409" id="jd2-1A-cv6" customClass="WBStatusCellTableViewCell" customModule="Weibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="409"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jd2-1A-cv6" id="kss-ro-wJJ">
-                <frame key="frameInset" width="447" height="358"/>
+                <frame key="frameInset" width="447" height="408.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-Eh-ftb" userLabel="顶部分隔视图">
@@ -97,13 +97,22 @@
                             <outlet property="retweetedButton" destination="Bom-z1-zZF" id="tuE-3N-ZKM"/>
                         </connections>
                     </view>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-dQ-OVl">
+                        <frame key="frameInset" minX="11" minY="90" width="424" height="151"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="285" id="3Ml-85-CWx"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="6dE-4s-fwQ" secondAttribute="bottom" id="0yY-xY-5La"/>
                     <constraint firstItem="VPL-Eh-ftb" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" id="0zU-QN-q9h"/>
                     <constraint firstItem="30a-ND-gUD" firstAttribute="leading" secondItem="I3z-HF-A7Z" secondAttribute="leading" id="4gY-TH-U6Z"/>
+                    <constraint firstItem="T3x-dQ-OVl" firstAttribute="top" secondItem="30a-ND-gUD" secondAttribute="bottom" constant="12" id="6Ak-eq-L4j"/>
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="centerY" secondItem="Dq0-1t-Aeo" secondAttribute="centerY" id="6T5-oz-IFs"/>
                     <constraint firstItem="I3z-HF-A7Z" firstAttribute="top" secondItem="kss-ro-wJJ" secondAttribute="top" constant="12" id="FAd-YW-Tzt"/>
+                    <constraint firstAttribute="trailing" secondItem="T3x-dQ-OVl" secondAttribute="trailing" constant="12" id="Mi2-dx-8fM"/>
                     <constraint firstItem="I3z-HF-A7Z" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" constant="11" id="OA0-wL-EiN"/>
                     <constraint firstItem="5jU-QW-xcj" firstAttribute="centerX" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="-4" id="PdB-jz-GbH"/>
                     <constraint firstItem="30a-ND-gUD" firstAttribute="top" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="11" id="QYY-n4-Dva"/>
@@ -112,9 +121,10 @@
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="30a-ND-gUD" secondAttribute="trailing" constant="11" id="Uuo-cS-DqT"/>
                     <constraint firstItem="SGd-21-Xgi" firstAttribute="leading" secondItem="Dq0-1t-Aeo" secondAttribute="leading" id="Vqa-uY-1tj"/>
                     <constraint firstItem="Dq0-1t-Aeo" firstAttribute="top" secondItem="I3z-HF-A7Z" secondAttribute="top" constant="4" id="Ybu-yG-NEj"/>
+                    <constraint firstItem="T3x-dQ-OVl" firstAttribute="leading" secondItem="30a-ND-gUD" secondAttribute="leading" id="awA-HK-M1E"/>
                     <constraint firstItem="Dq0-1t-Aeo" firstAttribute="leading" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="11" id="b5k-AM-4yb"/>
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="leading" secondItem="Dq0-1t-Aeo" secondAttribute="trailing" constant="4" id="bjc-pp-wsQ"/>
-                    <constraint firstItem="6dE-4s-fwQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="30a-ND-gUD" secondAttribute="bottom" constant="12" id="fzV-cQ-iwj"/>
+                    <constraint firstItem="6dE-4s-fwQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="T3x-dQ-OVl" secondAttribute="bottom" constant="12" id="dBQ-Te-gny"/>
                     <constraint firstItem="5jU-QW-xcj" firstAttribute="centerY" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="-4" id="mAL-pB-IbW"/>
                     <constraint firstItem="6dE-4s-fwQ" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" id="mnt-oE-7rV"/>
                     <constraint firstItem="E6V-PQ-yVC" firstAttribute="centerY" secondItem="SGd-21-Xgi" secondAttribute="centerY" id="nmf-Mw-Dcz"/>
@@ -133,7 +143,7 @@
                 <outlet property="timeLable" destination="SGd-21-Xgi" id="Qb1-0h-dFT"/>
                 <outlet property="vipIconView" destination="5jU-QW-xcj" id="yGi-fR-50c"/>
             </connections>
-            <point key="canvasLocation" x="-315.5" y="-199.5"/>
+            <point key="canvasLocation" x="-1006.5" y="-134.5"/>
         </tableViewCell>
     </objects>
     <resources>

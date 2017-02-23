@@ -24,6 +24,9 @@ class WBStatusCellTableViewCell: UITableViewCell {
             //用户头像
             iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"),isAvatar: true)
             tarBar.viewModel = viewModel
+            
+            //设置高度
+            pictureView.heightCons.constant = viewModel?.pictureViewSize.height ?? 0
         }
     }
     
@@ -43,6 +46,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLable: UILabel!
     // 底部工具栏
     @IBOutlet weak var tarBar: WBStatusTarbar!
+    // 配图视图
+    @IBOutlet weak var pictureView: WBStatusPictureView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

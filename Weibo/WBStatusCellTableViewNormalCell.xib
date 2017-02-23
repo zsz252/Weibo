@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="447" height="409"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jd2-1A-cv6" id="kss-ro-wJJ">
-                <frame key="frameInset" width="447" height="408.5"/>
+                <frame key="frameInset" width="447" height="408"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-Eh-ftb" userLabel="顶部分隔视图">
@@ -97,23 +97,24 @@
                             <outlet property="retweetedButton" destination="Bom-z1-zZF" id="tuE-3N-ZKM"/>
                         </connections>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-dQ-OVl">
-                        <frame key="frameInset" minX="11" minY="90" width="424" height="151"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-dQ-OVl" userLabel="配图视图" customClass="WBStatusPictureView" customModule="Weibo" customModuleProvider="target">
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="285" id="3Ml-85-CWx"/>
                         </constraints>
+                        <connections>
+                            <outlet property="heightCons" destination="3Ml-85-CWx" id="5zK-Bb-QUA"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="6dE-4s-fwQ" secondAttribute="bottom" id="0yY-xY-5La"/>
                     <constraint firstItem="VPL-Eh-ftb" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" id="0zU-QN-q9h"/>
                     <constraint firstItem="30a-ND-gUD" firstAttribute="leading" secondItem="I3z-HF-A7Z" secondAttribute="leading" id="4gY-TH-U6Z"/>
-                    <constraint firstItem="T3x-dQ-OVl" firstAttribute="top" secondItem="30a-ND-gUD" secondAttribute="bottom" constant="12" id="6Ak-eq-L4j"/>
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="centerY" secondItem="Dq0-1t-Aeo" secondAttribute="centerY" id="6T5-oz-IFs"/>
                     <constraint firstItem="I3z-HF-A7Z" firstAttribute="top" secondItem="kss-ro-wJJ" secondAttribute="top" constant="12" id="FAd-YW-Tzt"/>
                     <constraint firstAttribute="trailing" secondItem="T3x-dQ-OVl" secondAttribute="trailing" constant="12" id="Mi2-dx-8fM"/>
-                    <constraint firstItem="I3z-HF-A7Z" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" constant="11" id="OA0-wL-EiN"/>
+                    <constraint firstItem="I3z-HF-A7Z" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" constant="12" id="OA0-wL-EiN"/>
                     <constraint firstItem="5jU-QW-xcj" firstAttribute="centerX" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="-4" id="PdB-jz-GbH"/>
                     <constraint firstItem="30a-ND-gUD" firstAttribute="top" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="11" id="QYY-n4-Dva"/>
                     <constraint firstAttribute="trailing" secondItem="6dE-4s-fwQ" secondAttribute="trailing" id="TOx-sV-Oop"/>
@@ -125,6 +126,7 @@
                     <constraint firstItem="Dq0-1t-Aeo" firstAttribute="leading" secondItem="I3z-HF-A7Z" secondAttribute="trailing" constant="11" id="b5k-AM-4yb"/>
                     <constraint firstItem="9wO-Ub-dsa" firstAttribute="leading" secondItem="Dq0-1t-Aeo" secondAttribute="trailing" constant="4" id="bjc-pp-wsQ"/>
                     <constraint firstItem="6dE-4s-fwQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="T3x-dQ-OVl" secondAttribute="bottom" constant="12" id="dBQ-Te-gny"/>
+                    <constraint firstItem="T3x-dQ-OVl" firstAttribute="top" secondItem="30a-ND-gUD" secondAttribute="bottom" id="gm0-M8-mHY"/>
                     <constraint firstItem="5jU-QW-xcj" firstAttribute="centerY" secondItem="I3z-HF-A7Z" secondAttribute="bottom" constant="-4" id="mAL-pB-IbW"/>
                     <constraint firstItem="6dE-4s-fwQ" firstAttribute="leading" secondItem="kss-ro-wJJ" secondAttribute="leading" id="mnt-oE-7rV"/>
                     <constraint firstItem="E6V-PQ-yVC" firstAttribute="centerY" secondItem="SGd-21-Xgi" secondAttribute="centerY" id="nmf-Mw-Dcz"/>
@@ -137,6 +139,7 @@
                 <outlet property="iconView" destination="I3z-HF-A7Z" id="aTE-VF-E7m"/>
                 <outlet property="memberIconView" destination="9wO-Ub-dsa" id="ZSU-UR-83h"/>
                 <outlet property="nameLable" destination="Dq0-1t-Aeo" id="Goe-Ez-a1x"/>
+                <outlet property="pictureView" destination="T3x-dQ-OVl" id="AxW-it-Gw9"/>
                 <outlet property="sourceLable" destination="E6V-PQ-yVC" id="S2Y-r2-2Uw"/>
                 <outlet property="statusLable" destination="30a-ND-gUD" id="Vis-Z0-34d"/>
                 <outlet property="tarBar" destination="6dE-4s-fwQ" id="0VG-0x-dtq"/>

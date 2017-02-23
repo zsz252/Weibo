@@ -25,6 +25,7 @@ class WBStatusViewModel: CustomStringConvertible{
     //点赞文字
     var likeStr:String?
     
+    var pictureViewSize = CGSize()
     /// 构造函数
     ///
     /// - parameter model: 微博模型
@@ -46,12 +47,22 @@ class WBStatusViewModel: CustomStringConvertible{
         retweetedStr = countString(count: model.reposts_count, defaultStr: "转发")
         commentStr = countString(count: model.comments_count, defaultStr: "评论")
         likeStr = countString(count: model.attitudes_count, defaultStr: "点赞")
+        
+        pictureViewSize = calcPictureViewSize(count: status.pic_urls?.count)
     }
     
     var description: String{
         return status.description
     }
     
+    /// 计算指定数量的图片对应的配图视图的大小
+    ///
+    /// - parameter count: 配图数量
+    ///
+    /// - returns: 配图视图的大小
+    func calcPictureViewSize(count:Int) -> CGSize {
+        <#function body#>
+    }
     
     /// 返回数值
     ///

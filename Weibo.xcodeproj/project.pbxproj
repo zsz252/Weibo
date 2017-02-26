@@ -11,6 +11,8 @@
 		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
 		18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */; };
 		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
+		1818109C1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818109B1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift */; };
+		1818109E1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1818109D1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib */; };
 		181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */; };
 		181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
@@ -70,6 +72,8 @@
 		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
 		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
+		1818109B1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCellTableViewRetweetedCell.swift; sourceTree = "<group>"; };
+		1818109D1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusCellTableViewRetweetedCell.xib; sourceTree = "<group>"; };
 		181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCellTableViewCell.swift; sourceTree = "<group>"; };
 		181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusCellTableViewNormalCell.xib; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */,
 				181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */,
 				181ABD021E5E845A0045BC5C /* WBStatusPictureView.swift */,
+				1818109D1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib */,
+				1818109B1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift */,
 			);
 			name = StatusCell;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1818109E1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib in Resources */,
 				181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */,
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
 				186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */,
@@ -581,6 +588,7 @@
 				189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */,
 				181ABD011E5E72B00045BC5C /* WBStatusTarbar.swift in Sources */,
 				18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */,
+				1818109C1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift in Sources */,
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,

@@ -9,7 +9,9 @@
 import UIKit
 
 //定义全局常量
-private let cellId = "cellId"
+// 原创微博可重用 cell id
+private let originalCellId = "originalCellId"
+private let retweetedCellId = "retweetedCellId"
 
 class WBHomeViewController: WBBaseViewController {
     
@@ -72,7 +74,7 @@ extension WBHomeViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //1.取cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: originalCellId, for: indexPath) as! WBStatusCellTableViewCell
         //2.设置cell
         let viewModel = listViewModel.statusList[indexPath.row]
         cell.viewModel = viewModel
@@ -96,8 +98,8 @@ extension WBHomeViewController{
         navItem.leftBarButtonItem = UIBarButtonItem(title: "好友", target: self, action: #selector(showFriends))
         
         // 注册原型 cell
-        tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
-        
+        tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: originalCellId)
+        tableView?.register(UINib(nibName: "WBStatusCellTableViewRetweetedCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
         // 设置行高
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 300

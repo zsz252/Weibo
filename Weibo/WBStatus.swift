@@ -27,6 +27,9 @@ class WBStatus: NSObject {
     //微博的用户
     var user:WBUser?
     
+    //被转发的原创微博
+    var retweeted_status:WBStatus?
+    
     //微博配图模型数组
     var pic_urls:[WBStatusPicture]?
     

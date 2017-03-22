@@ -28,7 +28,7 @@ class WBStatusCellTableViewCell: UITableViewCell {
             //设置高度
             pictureView.heightCons.constant = viewModel?.pictureViewSize.height ?? 0
             //设置配图视图数据
-            pictureView.urls = viewModel?.status.pic_urls
+            pictureView.urls = viewModel?.picURLs
         }
     }
     

@@ -29,6 +29,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
             pictureView.heightCons.constant = viewModel?.pictureViewSize.height ?? 0
             //设置配图视图数据
             pictureView.urls = viewModel?.picURLs
+            //设置被转发微博文字
+            retweetedLable?.text = viewModel?.retweetedText
         }
     }
     
@@ -50,6 +52,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
     @IBOutlet weak var tarBar: WBStatusTarbar!
     // 配图视图
     @IBOutlet weak var pictureView: WBStatusPictureView!
+    // 被转发微博的文字
+    @IBOutlet weak var retweetedLable: UILabel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

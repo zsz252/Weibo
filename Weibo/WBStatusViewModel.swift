@@ -35,6 +35,9 @@ class WBStatusViewModel: CustomStringConvertible{
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
     
+    //被转发微博文字
+    var retweetedText: String?
+    
     /// 构造函数
     ///
     /// - parameter model: 微博模型
@@ -58,6 +61,9 @@ class WBStatusViewModel: CustomStringConvertible{
         likeStr = countString(count: model.attitudes_count, defaultStr: "点赞")
         
         pictureViewSize = calcPictureViewSize(count: (picURLs?.count)!)
+        
+        // 设置被转发微博的文字
+        retweetedText = "@" + (status.retweeted_status?.user?.screen_name ?? "") + ":" + (status.retweeted_status?.text ?? "")
     }
     
     var description: String{

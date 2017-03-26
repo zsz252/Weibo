@@ -63,6 +63,21 @@ class WBStatusListViewModel {
     ///
     /// - parameter list: 本次下载的视图模型数组
     func cacheSingleImage(list:[WBStatusViewModel]){
-        
+        //遍历数组，查找微博数据中有单张图像的，进行缓存
+        for vm in list{
+            
+            //1.判断图像数量
+            if vm.picURLs?.count != 1{
+                continue
+            }
+            
+            //2.获取图像模型
+            guard let pic = vm.picURLs![0].thumbnail_pic,
+                let url = URL(string: pic) else{
+                    continue
+            }
+            
+            
+        }
     }
 }

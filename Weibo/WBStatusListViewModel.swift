@@ -48,8 +48,21 @@ class WBStatusListViewModel {
             //拼接数据
             pullup ? (self.statusList += array) : (self.statusList = array + self.statusList)
             
-            //完成回调 网络请求是否成功
-            completion(isSucess)
+            if pullup && array.count != 0{
+                
+                self.cacheSingleImage(list: array)
+                //完成回调 网络请求是否成功
+                completion(isSucess)
+            }
+
         }
+    }
+    
+    
+    /// 缓存本子下载微博数据数组中的单张图像
+    ///
+    /// - parameter list: 本次下载的视图模型数组
+    func cacheSingleImage(list:[WBStatusViewModel]){
+        
     }
 }

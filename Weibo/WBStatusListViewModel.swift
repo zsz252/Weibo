@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SDWebImage
 class WBStatusListViewModel {
     
     //微博数据模型懒加载
@@ -63,6 +63,11 @@ class WBStatusListViewModel {
     ///
     /// - parameter list: 本次下载的视图模型数组
     func cacheSingleImage(list:[WBStatusViewModel]){
+        
+        //调度组
+        let group = DispatchGroup()
+        
+        var length = 0
         //遍历数组，查找微博数据中有单张图像的，进行缓存
         for vm in list{
             
@@ -76,7 +81,23 @@ class WBStatusListViewModel {
                 let url = URL(string: pic) else{
                     continue
             }
+            // 入组
+            group.enter()
             
+            //3.下载图像
+            SDWebImageManager.shared().downloadImage(with: url, options: [], progress: nil, completed: { (image, _, _, _, _) in
+                
+                let data = UIImagePNGRepresentation(image!)
+                
+                length += (data?.count)!
+                
+                //出组，放在闭包最后一句
+                group.leave()
+            })
+        }
+        
+        // 监听调度组情况
+        group.notify(queue: DispatchQueue.main) { 
             
         }
     }

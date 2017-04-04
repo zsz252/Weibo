@@ -50,9 +50,7 @@ class WBStatusListViewModel {
             
             if pullup && array.count != 0{
                 
-                self.cacheSingleImage(list: array)
-                //完成回调 网络请求是否成功
-                completion(isSucess)
+                self.cacheSingleImage(list: array,completion: completion)
             }
 
         }
@@ -62,7 +60,7 @@ class WBStatusListViewModel {
     /// 缓存本子下载微博数据数组中的单张图像
     ///
     /// - parameter list: 本次下载的视图模型数组
-    func cacheSingleImage(list:[WBStatusViewModel]){
+    func cacheSingleImage(list:[WBStatusViewModel],completion:@escaping (_ isSucess:Bool)->()){
         
         //调度组
         let group = DispatchGroup()
@@ -98,7 +96,8 @@ class WBStatusListViewModel {
         
         // 监听调度组情况
         group.notify(queue: DispatchQueue.main) { 
-            
+            //完成回调 网络请求是否成功
+            completion(true)
         }
     }
 }

@@ -48,7 +48,7 @@ class WBStatusListViewModel {
             //拼接数据
             pullup ? (self.statusList += array) : (self.statusList = array + self.statusList)
             
-            if pullup && array.count != 0{
+            if pullup || array.count != 0{
                 
                 self.cacheSingleImage(list: array,completion: completion)
             }
@@ -88,6 +88,9 @@ class WBStatusListViewModel {
                 let data = UIImagePNGRepresentation(image!)
                 
                 length += (data?.count)!
+                
+                //图像缓存成功，更新配图视图大小
+                vm.updateSingleImageSize(image: image!)
                 
                 //出组，放在闭包最后一句
                 group.leave()

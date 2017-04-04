@@ -70,6 +70,15 @@ class WBStatusViewModel: CustomStringConvertible{
         return status.description
     }
     
+    func updateSingleImageSize(image:UIImage){
+        
+        var size = image.size
+        
+        size.height += WBStatusPictureViewOutterMargin
+        
+        pictureViewSize = size
+    }
+    
     /// 计算指定数量的图片对应的配图视图的大小
     ///
     /// - parameter count: 配图数量

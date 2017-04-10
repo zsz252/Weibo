@@ -25,8 +25,10 @@ class WBStatusCellTableViewCell: UITableViewCell {
             iconView.wb_setImage(urlString: (viewModel?.status.user?.profile_image_url)!, placeholderImage: UIImage(named: "profile_"),isAvatar: true)
             tarBar.viewModel = viewModel
             
+            //配图视图视图模型
+            pictureView.viewModel = viewModel
             //设置高度
-            pictureView.heightCons.constant = viewModel?.pictureViewSize.height ?? 0
+            //pictureView.heightCons.constant = viewModel?.pictureViewSize.height ?? 0
             //设置配图视图数据
             pictureView.urls = viewModel?.picURLs
             //设置被转发微博文字

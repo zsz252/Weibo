@@ -38,6 +38,8 @@ class WBStatusViewModel: CustomStringConvertible{
     //被转发微博文字
     var retweetedText: String?
     
+    //行高
+    var rowHeight:CGFloat = 0
     /// 构造函数
     ///
     /// - parameter model: 微博模型
@@ -64,6 +66,8 @@ class WBStatusViewModel: CustomStringConvertible{
         
         // 设置被转发微博的文字
         retweetedText = "@" + (status.retweeted_status?.user?.screen_name ?? "") + ":" + (status.retweeted_status?.text ?? "")
+        // 计算行高
+        updateRowHeight()
     }
     
     var description: String{
@@ -77,6 +81,44 @@ class WBStatusViewModel: CustomStringConvertible{
         size.height += WBStatusPictureViewOutterMargin
         
         pictureViewSize = size
+    }
+    
+    
+    /// 根据当前视图模型计算行高
+    func updateRowHeight(){
+        
+        let margin:CGFloat = 12
+        let iconHeight:CGFloat = 34
+        let toolbarHeight:CGFloat = 35
+        
+        var height:CGFloat = 0
+        
+        let viewSize = CGSize(width: UIScreen.main.bounds.size.width - 2 * margin, height: CGFloat(MAXFLOAT))
+        let originalFont = UIFont.systemFont(ofSize: 15)
+        let retweetFont = UIFont.systemFont(ofSize: 14)
+        //计算顶部位置
+        height = 2 * margin + iconHeight + margin
+        
+        //正文高度
+        if let text = status.text{
+            height += (text as NSString).boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName:originalFont], context: nil).height
+        }
+        
+        //判断是否转发微博
+        if status.retweeted_status != nil{
+            height += 2 * margin
+            
+            if let text = retweetedText{
+                height += (text as NSString).boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], attributes: [NSFontAttributeName:retweetFont], context: nil).height
+            }
+        }
+        
+        //配图视图
+        height += pictureViewSize.height
+        height += margin
+        
+        //底部工具栏
+        height += toolbarHeight
     }
     
     /// 计算指定数量的图片对应的配图视图的大小

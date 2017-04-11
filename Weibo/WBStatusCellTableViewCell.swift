@@ -56,9 +56,19 @@ class WBStatusCellTableViewCell: UITableViewCell {
     @IBOutlet weak var pictureView: WBStatusPictureView!
     // 被转发微博的文字
     @IBOutlet weak var retweetedLable: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        // 离屏渲染 - 异步绘制
+        self.layer.drawsAsynchronously = true
+        
+        // 栅格化 - 异步绘制之后，会生成一张独立的图像，cell在屏幕上滚动的时候，是滚动的这张图像
+        self.layer.shouldRasterize = true
+        
+        // 使用 栅格化 注意重新指定分辨率 
+        self.layer.rasterizationScale = UIScreen.main.scale
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

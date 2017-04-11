@@ -51,6 +51,15 @@
                         <color key="textColor" red="1" green="0.42352941176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-dQ-OVl" userLabel="配图视图" customClass="WBStatusPictureView" customModule="Weibo" customModuleProvider="target">
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="285" id="3Ml-85-CWx"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="heightCons" destination="3Ml-85-CWx" id="5zK-Bb-QUA"/>
+                        </connections>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dE-4s-fwQ" userLabel="底部工具栏" customClass="WBStatusTarbar" customModule="Weibo" customModuleProvider="target">
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n53-nb-fAb">
@@ -95,15 +104,6 @@
                             <outlet property="commentButton" destination="AwN-JD-ta2" id="tS1-sO-Z7l"/>
                             <outlet property="likeButton" destination="n53-nb-fAb" id="dcf-Gz-X9P"/>
                             <outlet property="retweetedButton" destination="Bom-z1-zZF" id="tuE-3N-ZKM"/>
-                        </connections>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-dQ-OVl" userLabel="配图视图" customClass="WBStatusPictureView" customModule="Weibo" customModuleProvider="target">
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="285" id="3Ml-85-CWx"/>
-                        </constraints>
-                        <connections>
-                            <outlet property="heightCons" destination="3Ml-85-CWx" id="5zK-Bb-QUA"/>
                         </connections>
                     </view>
                 </subviews>

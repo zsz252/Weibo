@@ -81,6 +81,9 @@ class WBStatusViewModel: CustomStringConvertible{
         size.height += WBStatusPictureViewOutterMargin
         
         pictureViewSize = size
+        
+        //更新行高
+        updateRowHeight()
     }
     
     

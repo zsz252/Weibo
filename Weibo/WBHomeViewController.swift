@@ -84,6 +84,13 @@ extension WBHomeViewController{
         //3.返回cell
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let vm = listViewModel.statusList[indexPath.row]
+        
+        //返回计算好的行高
+        return vm.rowHeight
+    }
 }
 
 // MARK: - 设置界面
@@ -104,7 +111,8 @@ extension WBHomeViewController{
         tableView?.register(UINib(nibName: "WBStatusCellTableViewNormalCell", bundle: nil), forCellReuseIdentifier: originalCellId)
         tableView?.register(UINib(nibName: "WBStatusCellTableViewRetweetedCell", bundle: nil), forCellReuseIdentifier: retweetedCellId)
         // 设置行高
-        tableView?.rowHeight = UITableViewAutomaticDimension
+        //取消行高自动适应
+        //tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 300
         
         // 取消底部分割线

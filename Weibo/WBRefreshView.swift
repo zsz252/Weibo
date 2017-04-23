@@ -18,5 +18,11 @@ class WBRefreshView: UIView {
     // 提示器
     @IBOutlet weak var indicator: UIActivityIndicatorView!
 
-
+    class func refreshView() -> WBRefreshView {
+    
+        let nib = UINib(nibName: "WBRefresh", bundle: nil)
+        
+        return nib.instantiate(withOwner: nil, options: nil)[0] as! WBRefreshView
+    
+    }
 }

@@ -14,6 +14,8 @@ class WBRefresh: UIControl {
     /// 刷新控件的父视图，下拉刷新控件应适用于 UITableView 和 UIColletionView
     private weak var scrollView:UIScrollView?
     
+    lazy var refreshView = WBRefreshView.refreshView()
+    
     //MARK: - 构造函数
     init() {
         super.init(frame: CGRect())
@@ -84,6 +86,23 @@ extension WBRefresh{
     
     func setupUI(){
         backgroundColor = UIColor.orange
+        
+        // 设置出边界不显示
+        clipsToBounds = true
+        
+        // 添加刷新视图
+        addSubview(refreshView)
+        
+        // 自动布局 - 设置 xib 控件的自动布局，需要指定宽高约束
+        refreshView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addConstraint(NSLayoutConstraint(item: refreshView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0))
+        
+        addConstraint(NSLayoutConstraint(item: refreshView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0))
+        
+        addConstraint(NSLayoutConstraint(item: refreshView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: refreshView.bounds.width))
+        
+        addConstraint(NSLayoutConstraint(item: refreshView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: refreshView.bounds.height))
     }
     
 }

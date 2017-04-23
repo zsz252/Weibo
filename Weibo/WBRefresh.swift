@@ -91,14 +91,17 @@ class WBRefresh: UIControl {
             
             if height > WBRefreshOffset && (refreshView.refreshState == .Normal){
                 refreshView.refreshState = .Pulling
+
             }
             
         }else if height <= WBRefreshOffset && (refreshView.refreshState == .Pulling){
             refreshView.refreshState = .Normal
+
         }else{
             
             if refreshView.refreshState == .Pulling {
                 refreshView.refreshState = .willRefresh
+
             }
             
         }
@@ -119,7 +122,7 @@ class WBRefresh: UIControl {
 extension WBRefresh{
     
     func setupUI(){
-        backgroundColor = UIColor.orange
+        backgroundColor = super.backgroundColor
         
         // 设置出边界不显示
         clipsToBounds = true

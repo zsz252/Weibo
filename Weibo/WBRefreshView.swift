@@ -11,7 +11,18 @@ import UIKit
 /// 刷新视图 - 负责刷新相关的 UI显示 和 动画
 class WBRefreshView: UIView {
     
-    var refreshState:WBRefreshState = .Normal
+    var refreshState:WBRefreshState = .Normal{
+        didSet{
+            switch refreshState {
+            case .Normal:
+                tipLable.text = "下拉开始刷新"
+            case .Pulling:
+                tipLable.text = "放手开始刷新"
+            case .willRefresh:
+                tipLable.text = "正在刷新~"
+            }
+        }
+    }
     
     // 提示标签
     @IBOutlet weak var tipIcon: UIImageView!

@@ -9,7 +9,7 @@
 import UIKit
 
 // 刷新状态变化临界值
-private let WBRefreshOffset:CGFloat = 60
+private let WBRefreshOffset:CGFloat = 100
 
 /// 刷新状态
 ///
@@ -85,25 +85,23 @@ class WBRefresh: UIControl {
         }
         
         self.frame = CGRect(x: 0, y: -height, width: sv.bounds.width, height: height)
-        
+        //print(height)
         //判断临界点
         if sv.isDragging{
             
             if height > WBRefreshOffset && (refreshView.refreshState == .Normal){
                 refreshView.refreshState = .Pulling
 
-            }
-            
-        }else if height <= WBRefreshOffset && (refreshView.refreshState == .Pulling){
-            refreshView.refreshState = .Normal
+            }else if height <= WBRefreshOffset && (refreshView.refreshState == .Pulling){
 
+                refreshView.refreshState = .Normal
+            }
         }else{
             
             if refreshView.refreshState == .Pulling {
                 refreshView.refreshState = .willRefresh
 
             }
-            
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// 刷新控件
+/// 刷新控件 - 负责刷新相关的逻辑处理
 class WBRefresh: UIControl {
     
     /// 刷新控件的父视图，下拉刷新控件应适用于 UITableView 和 UIColletionView

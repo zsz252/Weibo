@@ -8,6 +8,20 @@
 
 import UIKit
 
+// 刷新状态变化临界值
+private let WBRefreshOffset:CGFloat = 60
+
+/// 刷新状态
+///
+/// - Normal:      普通状态，什么都不做
+/// - Pulling:     超过临界点，如果放手，开始刷新
+/// - willRefresh: 用户超过临界点，并且放手
+enum WBRefreshState {
+    case Normal
+    case Pulling
+    case willRefresh
+}
+
 /// 刷新控件 - 负责刷新相关的逻辑处理
 class WBRefresh: UIControl {
     
@@ -66,8 +80,28 @@ class WBRefresh: UIControl {
         // 刷新控件初始高度
         let height = -(sv.contentInset.top + sv.contentOffset.y)
         
+        if height < 0 {
+            return
+        }
+        
         self.frame = CGRect(x: 0, y: -height, width: sv.bounds.width, height: height)
-
+        
+        //判断临界点
+        if sv.isDragging{
+            
+            if height > WBRefreshOffset && (refreshView.refreshState == .Normal){
+                refreshView.refreshState = .Pulling
+            }
+            
+        }else if height <= WBRefreshOffset && (refreshView.refreshState == .Pulling){
+            refreshView.refreshState = .Normal
+        }else{
+            
+            if refreshView.refreshState == .Pulling {
+                refreshView.refreshState = .willRefresh
+            }
+            
+        }
     }
     
     //开始刷新

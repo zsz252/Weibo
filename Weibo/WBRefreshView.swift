@@ -11,6 +11,8 @@ import UIKit
 /// 刷新视图 - 负责刷新相关的 UI显示 和 动画
 class WBRefreshView: UIView {
     
+    var refreshState:WBRefreshState = .Normal
+    
     // 提示标签
     @IBOutlet weak var tipIcon: UIImageView!
     // 提示图标

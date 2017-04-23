@@ -47,8 +47,14 @@ class WBRefresh: UIControl {
         scrollView?.addObserver(self, forKeyPath: "contentOffset", options: [], context: nil)
     }
     
+    override func removeFromSuperview() {
+        superview?.removeObserver(self, forKeyPath: "contentOffset")
+        
+        super.removeFromSuperview()
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print(scrollView?.contentOffset)
+        //print(scrollView?.contentOffset)
         
         // 记录父视图
         guard let sv = scrollView else {

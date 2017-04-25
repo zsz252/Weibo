@@ -102,6 +102,9 @@ class WBRefresh: UIControl {
             
             if refreshView.refreshState == .Pulling {
                 beginRefreshing()
+                
+                //发送刷新数据的时间
+                sendActions(for: .valueChanged)
             }
         }
     }
@@ -129,6 +132,10 @@ class WBRefresh: UIControl {
     func endRefreshing(){
         
         guard let sv = scrollView else {
+            return
+        }
+        
+        if refreshView.refreshState != .willRefresh{
             return
         }
         

@@ -48,8 +48,8 @@ class WBStatusListViewModel {
             //拼接数据
             pullup ? (self.statusList += array) : (self.statusList = array + self.statusList)
             
-            if pullup || array.count != 0{
-                
+            if !pullup{
+                print(array)
                 self.cacheSingleImage(list: array,completion: completion)
             }
 

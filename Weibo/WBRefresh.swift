@@ -128,6 +128,16 @@ class WBRefresh: UIControl {
     //结束刷新
     func endRefreshing(){
         
+        guard let sv = scrollView else {
+            return
+        }
+        
+        refreshView.refreshState = .Normal
+        
+        var inset = sv.contentInset
+        inset.top -= WBRefreshOffset
+        sv.contentInset = inset
+        
     }
 
 }

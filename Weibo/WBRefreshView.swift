@@ -19,6 +19,8 @@ class WBRefreshView: UIView {
                 UIView.animate(withDuration: 0.25, animations: {
                     self.tipIcon.transform = CGAffineTransform.identity
                 })
+                tipIcon.isHidden = false
+                indicator.stopAnimating()
             case .Pulling:
                 tipLable.text = "放手开始刷新"
                 UIView.animate(withDuration: 0.25, animations: { 

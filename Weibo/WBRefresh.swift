@@ -101,13 +101,7 @@ class WBRefresh: UIControl {
         }else{
             
             if refreshView.refreshState == .Pulling {
-                refreshView.refreshState = .willRefresh
-                
-                //显示刷新视图
-                var inset = sv.contentInset
-                inset.top += WBRefreshOffset
-                
-                sv.contentInset = inset
+                beginRefreshing()
             }
         }
     }
@@ -116,6 +110,10 @@ class WBRefresh: UIControl {
     func beginRefreshing(){
         
         guard let sv = scrollView else {
+            return
+        }
+        
+        if refreshView.refreshState == .willRefresh{
             return
         }
         

@@ -61,6 +61,8 @@ class WBRefresh: UIControl {
         // KVO监听父视图的 cotentOffset
         
         scrollView?.addObserver(self, forKeyPath: "contentOffset", options: [], context: nil)
+        
+        beginRefreshing()
     }
     
     override func removeFromSuperview() {
@@ -113,6 +115,16 @@ class WBRefresh: UIControl {
     //开始刷新
     func beginRefreshing(){
         
+        guard let sv = scrollView else {
+            return
+        }
+        
+        refreshView.refreshState = .willRefresh
+        
+        var inset = sv.contentInset
+        inset.top += WBRefreshOffset
+        
+        sv.contentInset = inset
     }
 
     //结束刷新

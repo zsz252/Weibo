@@ -100,7 +100,12 @@ class WBRefresh: UIControl {
             
             if refreshView.refreshState == .Pulling {
                 refreshView.refreshState = .willRefresh
-
+                
+                //显示刷新视图
+                var inset = sv.contentInset
+                inset.top += WBRefreshOffset
+                
+                sv.contentInset = inset
             }
         }
     }
@@ -123,7 +128,7 @@ extension WBRefresh{
         backgroundColor = super.backgroundColor
         
         // 设置出边界不显示
-        clipsToBounds = true
+        //clipsToBounds = true
         
         // 添加刷新视图
         addSubview(refreshView)

@@ -26,6 +26,11 @@ class WBRefreshView: UIView {
                 })
             case .willRefresh:
                 tipLable.text = "正在刷新~"
+                
+                tipIcon.isHidden = true
+                
+                //显示菊花
+                indicator.startAnimating()
             }
         }
     }

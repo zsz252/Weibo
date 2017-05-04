@@ -31,9 +31,16 @@ class WBMainViewController: UITabBarController {
         //注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(userLogin(n:)), name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: nil)
     }
-    //利用 @objc private 保护函数，同时允许按钮调用
+    
+    //撰写微博
     func compseStatus(){
         print("撰写微博")
+        
+        // 实例化视图
+        let v = WBComposeTypeView.composeTypeView()
+        
+        // 显示视图
+        v.show()
     }
     
     //使用代码控制屏幕方向

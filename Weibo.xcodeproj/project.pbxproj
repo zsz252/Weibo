@@ -13,6 +13,8 @@
 		18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */; };
 		1818109C1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818109B1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift */; };
 		1818109E1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1818109D1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib */; };
+		181843721EBACE9000AAEDEC /* WBComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181843711EBACE9000AAEDEC /* WBComposeTypeView.swift */; };
+		181843741EBAD48100AAEDEC /* WBComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181843731EBAD48100AAEDEC /* WBComposeTypeView.xib */; };
 		181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */; };
 		181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */; };
 		18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18189F811E2D0D36003657D4 /* WBVisitorView.swift */; };
@@ -77,6 +79,8 @@
 		18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		1818109B1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCellTableViewRetweetedCell.swift; sourceTree = "<group>"; };
 		1818109D1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusCellTableViewRetweetedCell.xib; sourceTree = "<group>"; };
+		181843711EBACE9000AAEDEC /* WBComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeView.swift; sourceTree = "<group>"; };
+		181843731EBAD48100AAEDEC /* WBComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeView.xib; sourceTree = "<group>"; };
 		181871341E5B39CD003C70AC /* WBStatusCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCellTableViewCell.swift; sourceTree = "<group>"; };
 		181871361E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBStatusCellTableViewNormalCell.xib; sourceTree = "<group>"; };
 		18189F811E2D0D36003657D4 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
@@ -168,6 +172,23 @@
 				18177A751E4B4E5F005DDAC6 /* WBUserAccount.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1818436F1EBACE5E00AAEDEC /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				181843701EBACE6600AAEDEC /* ComposeType */,
+			);
+			name = Compose;
+			sourceTree = "<group>";
+		};
+		181843701EBACE6600AAEDEC /* ComposeType */ = {
+			isa = PBXGroup;
+			children = (
+				181843711EBACE9000AAEDEC /* WBComposeTypeView.swift */,
+				181843731EBAD48100AAEDEC /* WBComposeTypeView.xib */,
+			);
+			name = ComposeType;
 			sourceTree = "<group>";
 		};
 		181871331E5B3967003C70AC /* StatusCell */ = {
@@ -279,6 +300,7 @@
 		1898759F1E28CECE00BDD953 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1818436F1EBACE5E00AAEDEC /* Compose */,
 				189875A71E28CF7400BDD953 /* Profile */,
 				189875A61E28CF4000BDD953 /* Discover */,
 				189875A51E28CF2900BDD953 /* Message */,
@@ -512,6 +534,7 @@
 				1828BC801EAFAFD50004E205 /* WBRefresh.xib in Resources */,
 				18E265371E2E6A2400A5E1C2 /* main.json in Resources */,
 				182E86971E28CB55002DED68 /* Main.storyboard in Resources */,
+				181843741EBAD48100AAEDEC /* WBComposeTypeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +636,7 @@
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,
 				181ABD051E5E8B2E0045BC5C /* WBStatusPicture.swift in Sources */,
+				181843721EBACE9000AAEDEC /* WBComposeTypeView.swift in Sources */,
 				182A4A1A1E5BD9CA0000676E /* WBUser.swift in Sources */,
 				18177A761E4B4E5F005DDAC6 /* WBUserAccount.swift in Sources */,
 				1824865D1E3777F90086B40D /* WBStatus.swift in Sources */,

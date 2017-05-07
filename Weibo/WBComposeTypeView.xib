@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="3ec0a5214e9e7cb1713d9712de9ddec4-1" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-2i-Ouy">
-                                <frame key="frameInset" minX="87" minY="98" width="200" height="202"/>
+                                <frame key="frameInset" minX="87" minY="98" width="200" height="193"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7u-ps-H8O">
@@ -34,14 +34,28 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="JxG-0g-rPh" secondAttribute="trailing" constant="166" id="3UU-Ei-ems"/>
+                                    <constraint firstItem="JxG-0g-rPh" firstAttribute="centerX" secondItem="L7u-ps-H8O" secondAttribute="centerX" id="8yg-gP-5MA"/>
                                     <constraint firstItem="JxG-0g-rPh" firstAttribute="centerY" secondItem="L7u-ps-H8O" secondAttribute="centerY" id="Nf5-OZ-hI8"/>
+                                    <constraint firstItem="JxG-0g-rPh" firstAttribute="centerY" secondItem="L7u-ps-H8O" secondAttribute="centerY" id="df1-Bb-Hny"/>
                                     <constraint firstAttribute="height" constant="44" id="iQj-2S-squ"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86b-Va-L9x">
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="224" id="8jS-dB-44Q"/>
+                                    <constraint firstAttribute="height" constant="224" id="BSB-4Q-jKQ"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="86b-Va-L9x" firstAttribute="leading" secondItem="p25-86-Hm9" secondAttribute="leading" id="0tj-ww-dSK"/>
+                            <constraint firstAttribute="trailing" secondItem="86b-Va-L9x" secondAttribute="trailing" id="C9z-mw-xSP"/>
                             <constraint firstAttribute="trailing" secondItem="L7u-ps-H8O" secondAttribute="trailing" id="Cxi-ic-KPX"/>
+                            <constraint firstItem="86b-Va-L9x" firstAttribute="leading" secondItem="p25-86-Hm9" secondAttribute="leading" id="SN4-v7-rr0"/>
+                            <constraint firstItem="L7u-ps-H8O" firstAttribute="top" secondItem="86b-Va-L9x" secondAttribute="bottom" constant="56" id="UNn-vA-ehX"/>
                             <constraint firstItem="L7u-ps-H8O" firstAttribute="leading" secondItem="p25-86-Hm9" secondAttribute="leading" id="VQ4-ul-hak"/>
+                            <constraint firstAttribute="trailing" secondItem="86b-Va-L9x" secondAttribute="trailing" id="gbR-S8-byl"/>
                             <constraint firstAttribute="bottom" secondItem="L7u-ps-H8O" secondAttribute="bottom" id="kKX-mz-c1Y"/>
                         </constraints>
                     </view>
@@ -57,15 +71,6 @@
             </constraints>
             <point key="canvasLocation" x="-159.5" y="-162.5"/>
         </view>
-        <visualEffectView opaque="NO" contentMode="scaleToFill" id="YKl-hd-fGm">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ie0-z2-NfX">
-                <frame key="frameInset"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            </view>
-            <blurEffect style="light"/>
-        </visualEffectView>
     </objects>
     <resources>
         <image name="3ec0a5214e9e7cb1713d9712de9ddec4-1" width="200" height="200"/>

@@ -42,5 +42,24 @@ class WBComposeTypeView: UIView {
         // 添加视图
         vc.view.addSubview(self)
     }
+    
+    override func awakeFromNib() {
+        setupUI()
+    }
+    
+    func click(){
+        
+    }
+}
 
+
+extension WBComposeTypeView{
+    
+    func setupUI(){
+        let btn = WBComposeTypeButton.composeTypeButton(imageName: "A295750F-90EA-47A4-8333-34A6A2655C69", lable: "书写")
+        
+        addSubview(btn)
+        
+        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
+    }
 }

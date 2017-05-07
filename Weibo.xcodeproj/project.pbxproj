@@ -28,6 +28,8 @@
 		1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */; };
 		1824865D1E3777F90086B40D /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865C1E3777F80086B40D /* WBStatus.swift */; };
 		1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */; };
+		18256DDE1EBF73B8007534D2 /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18256DDD1EBF73B8007534D2 /* WBComposeTypeButton.swift */; };
+		18256DE01EBF73F0007534D2 /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18256DDF1EBF73F0007534D2 /* WBComposeTypeButton.xib */; };
 		182663E61E38F81900942F71 /* WBCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182663E51E38F81900942F71 /* WBCommon.swift */; };
 		1828BC801EAFAFD50004E205 /* WBRefresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1828BC7F1EAFAFD50004E205 /* WBRefresh.xib */; };
 		1828BC821EAFAFE60004E205 /* WBRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828BC811EAFAFE60004E205 /* WBRefreshView.swift */; };
@@ -94,6 +96,8 @@
 		1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		1824865C1E3777F80086B40D /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
+		18256DDD1EBF73B8007534D2 /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
+		18256DDF1EBF73F0007534D2 /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		182663E51E38F81900942F71 /* WBCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCommon.swift; sourceTree = "<group>"; };
 		1828BC7F1EAFAFD50004E205 /* WBRefresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBRefresh.xib; sourceTree = "<group>"; };
 		1828BC811EAFAFE60004E205 /* WBRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRefreshView.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				181843711EBACE9000AAEDEC /* WBComposeTypeView.swift */,
 				181843731EBAD48100AAEDEC /* WBComposeTypeView.xib */,
+				18256DDD1EBF73B8007534D2 /* WBComposeTypeButton.swift */,
+				18256DDF1EBF73F0007534D2 /* WBComposeTypeButton.xib */,
 			);
 			name = ComposeType;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				1818109E1E6330BF00C1B729 /* WBStatusCellTableViewRetweetedCell.xib in Resources */,
 				181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */,
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
+				18256DE01EBF73F0007534D2 /* WBComposeTypeButton.xib in Resources */,
 				186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */,
 				18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */,
 				182E86991E28CB55002DED68 /* Assets.xcassets in Resources */,
@@ -610,6 +617,7 @@
 				1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */,
 				182A4A1E1E5BF2360000676E /* UIImageView+WebImage.swift in Sources */,
 				189875B31E28D11600BDD953 /* WBDiscoverViewController.swift in Sources */,
+				18256DDE1EBF73B8007534D2 /* WBComposeTypeButton.swift in Sources */,
 				1828BEAA1E36366D00C09D79 /* WBNetworkManager.swift in Sources */,
 				189875B11E28D10A00BDD953 /* WBMessageViewController.swift in Sources */,
 				181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 class WBComposeTypeView: UIView {
 
+    @IBOutlet weak var scrollView: UIScrollView!
 //    override init(frame: CGRect) {
 //        super.init(frame: UIScreen.main.bounds)
 //        
@@ -28,6 +29,8 @@ class WBComposeTypeView: UIView {
         // xib 加载 默认是 600*600
         v.frame = UIScreen.main.bounds
         
+        v.setupUI()
+        
         return v
     }
     
@@ -43,12 +46,13 @@ class WBComposeTypeView: UIView {
         vc.view.addSubview(self)
     }
     
-    override func awakeFromNib() {
-        setupUI()
-    }
-    
     func click(){
         
+    }
+    
+    // 关闭
+    @IBAction func close() {
+        self.removeFromSuperview()
     }
 }
 
@@ -56,10 +60,16 @@ class WBComposeTypeView: UIView {
 extension WBComposeTypeView{
     
     func setupUI(){
-        let btn = WBComposeTypeButton.composeTypeButton(imageName: "A295750F-90EA-47A4-8333-34A6A2655C69", lable: "书写")
+//        let btn = WBComposeTypeButton.composeTypeButton(imageName: "A295750F-90EA-47A4-8333-34A6A2655C69", lable: "书写")
+//        
+//        addSubview(btn)
+//        
+//        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
+        // 强行更新布局
+        layoutIfNeeded()
         
-        addSubview(btn)
+        let v = UIView()
+        // 向 scrollview 添加视图
         
-        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
     }
 }

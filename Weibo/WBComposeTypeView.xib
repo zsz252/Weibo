@@ -29,6 +29,9 @@
                                             <constraint firstAttribute="height" constant="44" id="wpL-GS-DWI"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="error_48px_1201052_easyicon.net"/>
+                                        <connections>
+                                            <action selector="close" destination="iN0-l3-epB" eventType="touchUpInside" id="8Y7-aY-7DJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -69,6 +72,9 @@
                 <constraint firstAttribute="bottom" secondItem="038-cX-28S" secondAttribute="bottom" id="T9L-SR-N1f"/>
                 <constraint firstItem="038-cX-28S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sYs-PD-2F4"/>
             </constraints>
+            <connections>
+                <outlet property="scrollView" destination="86b-Va-L9x" id="bt7-7p-asA"/>
+            </connections>
             <point key="canvasLocation" x="-159.5" y="-162.5"/>
         </view>
     </objects>

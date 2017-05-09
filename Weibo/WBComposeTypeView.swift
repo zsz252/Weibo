@@ -68,8 +68,43 @@ extension WBComposeTypeView{
         // 强行更新布局
         layoutIfNeeded()
         
-        let v = UIView()
-        // 向 scrollview 添加视图
+        let rect = scrollView.bounds
         
+        let v = UIView(frame:rect)
+        // 向 scrollview 添加视图
+        addButtons(v: v, idx: 0)
+        
+        scrollView.addSubview(v)
+    }
+    
+    
+    /// 向视图中添加按钮，数组索引从idx开始
+    func addButtons(v:UIView , idx:Int){
+        
+        let count = 6
+        // 从 idx 开始添加6个按钮
+        for i in idx..<(idx + count){
+            
+            let btn = WBComposeTypeButton.composeTypeButton(imageName: "error_48px_1201052_easyicon.net", lable: "文字")
+            
+            v.addSubview(btn)
+            
+        }
+        
+        // 遍历视图的子视图，布局按钮
+        let btnSize = CGSize(width: 100, height: 80)
+        let margin = (v.bounds.width - 3 * btnSize.width) / 4
+        
+        for (i,btn) in v.subviews.enumerated(){
+            
+            //let y = (Int)(i / 3) * 120
+            let y:CGFloat = (i>2) ? (v.bounds.height - btnSize.height) : 0
+            
+            let x = margin * CGFloat(i%3 + 1) + btnSize.width * CGFloat(i%3)
+            
+            btn.frame = CGRect(x: x, y: CGFloat(y), width: btnSize.width, height: btnSize.height)
+            
+            //print("\(i)  \(x)  \(y)")
+        }
     }
 }

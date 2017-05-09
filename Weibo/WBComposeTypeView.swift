@@ -69,12 +69,25 @@ extension WBComposeTypeView{
         layoutIfNeeded()
         
         let rect = scrollView.bounds
+        let width = scrollView.bounds.width
         
-        let v = UIView(frame:rect)
-        // 向 scrollview 添加视图
-        addButtons(v: v, idx: 0)
+        for i in 0...1{
+            
+            let v = UIView(frame:rect.offsetBy(dx: CGFloat(i) * width, dy: 0))
+            // 向 scrollview 添加视图
+            addButtons(v: v, idx: i * 6)
         
-        scrollView.addSubview(v)
+            scrollView.addSubview(v)
+        }
+        //设置scrollview
+        scrollView.contentSize = CGSize(width: 2 * width, height: 0)
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.bounces = false
+        scrollView.isPagingEnabled = true
+        
+        // 禁用滚动
+        //scrollView.isScrollEnabled = false
     }
     
     
@@ -84,6 +97,10 @@ extension WBComposeTypeView{
         let count = 6
         // 从 idx 开始添加6个按钮
         for i in idx..<(idx + count){
+            
+            if i>=10{
+                break
+            }
             
             let btn = WBComposeTypeButton.composeTypeButton(imageName: "error_48px_1201052_easyicon.net", lable: "文字")
             

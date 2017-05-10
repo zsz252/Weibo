@@ -86,6 +86,27 @@ class WBComposeTypeView: UIView {
         }
     }
     
+    //点击返回按钮
+    @IBAction func clickReturn(_ sender: AnyObject) {
+        
+        scrollView.setContentOffset(CGPoint(x:0,y:0), animated: true)
+        
+        let margin = scrollView.bounds.width / 7
+        returnButtonCenterX.constant += margin
+        closeButtonCenterX.constant -= margin
+        
+        UIView.animate(withDuration: 0.5, animations: { 
+            
+            self.layoutIfNeeded()
+            self.returnButton.alpha = 0
+            
+            }) { (_) in
+                self.returnButton.alpha = 1
+                self.returnButton.isHidden = true
+        }
+        
+    }
+    
     // 关闭
     @IBAction func close() {
         self.removeFromSuperview()

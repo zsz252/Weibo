@@ -35,6 +35,9 @@
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKW-aW-c5o" userLabel="返回">
                                         <state key="normal" image="left_arrow_32px_1205452_easyicon.net"/>
+                                        <connections>
+                                            <action selector="clickReturn:" destination="iN0-l3-epB" eventType="touchUpInside" id="pm8-0Q-ReE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

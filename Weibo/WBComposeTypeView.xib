@@ -23,7 +23,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7u-ps-H8O">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-0g-rPh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxG-0g-rPh" userLabel="退出">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="qgF-4o-Wgf"/>
                                             <constraint firstAttribute="height" constant="44" id="wpL-GS-DWI"/>
@@ -33,12 +33,16 @@
                                             <action selector="close" destination="iN0-l3-epB" eventType="touchUpInside" id="8Y7-aY-7DJ"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKW-aW-c5o" userLabel="返回">
+                                        <state key="normal" image="left_arrow_32px_1205452_easyicon.net"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="JxG-0g-rPh" secondAttribute="trailing" constant="166" id="3UU-Ei-ems"/>
+                                    <constraint firstItem="AKW-aW-c5o" firstAttribute="centerX" secondItem="L7u-ps-H8O" secondAttribute="centerX" id="8yA-61-yVb"/>
                                     <constraint firstItem="JxG-0g-rPh" firstAttribute="centerX" secondItem="L7u-ps-H8O" secondAttribute="centerX" id="8yg-gP-5MA"/>
                                     <constraint firstItem="JxG-0g-rPh" firstAttribute="centerY" secondItem="L7u-ps-H8O" secondAttribute="centerY" id="Nf5-OZ-hI8"/>
+                                    <constraint firstItem="AKW-aW-c5o" firstAttribute="centerY" secondItem="L7u-ps-H8O" secondAttribute="centerY" id="dK1-rK-04l"/>
                                     <constraint firstItem="JxG-0g-rPh" firstAttribute="centerY" secondItem="L7u-ps-H8O" secondAttribute="centerY" id="df1-Bb-Hny"/>
                                     <constraint firstAttribute="height" constant="44" id="iQj-2S-squ"/>
                                 </constraints>
@@ -73,6 +77,9 @@
                 <constraint firstItem="038-cX-28S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sYs-PD-2F4"/>
             </constraints>
             <connections>
+                <outlet property="closeButtonCenterX" destination="8yg-gP-5MA" id="MSN-7U-Q31"/>
+                <outlet property="returnButton" destination="AKW-aW-c5o" id="u48-QQ-X1c"/>
+                <outlet property="returnButtonCenterX" destination="8yA-61-yVb" id="wTN-Cz-l6z"/>
                 <outlet property="scrollView" destination="86b-Va-L9x" id="bt7-7p-asA"/>
             </connections>
             <point key="canvasLocation" x="-159.5" y="-162.5"/>
@@ -81,5 +88,6 @@
     <resources>
         <image name="3ec0a5214e9e7cb1713d9712de9ddec4-1" width="200" height="200"/>
         <image name="error_48px_1201052_easyicon.net" width="48" height="48"/>
+        <image name="left_arrow_32px_1205452_easyicon.net" width="32" height="32"/>
     </resources>
 </document>

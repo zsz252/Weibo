@@ -25,6 +25,12 @@ class WBComposeTypeView: UIView {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
+    // 返回按钮X约束
+    @IBOutlet weak var returnButtonCenterX: NSLayoutConstraint!
+    // 退出按钮X约束
+    @IBOutlet weak var closeButtonCenterX: NSLayoutConstraint!
+    // 返回按钮
+    @IBOutlet weak var returnButton: UIButton!
 //    override init(frame: CGRect) {
 //        super.init(frame: UIScreen.main.bounds)
 //        
@@ -67,6 +73,17 @@ class WBComposeTypeView: UIView {
     //点击更多按钮
     func clickMore(){
         
+        scrollView.setContentOffset(CGPoint(x: scrollView.bounds.width, y: 0), animated: true)
+        
+        returnButton.isHidden = false
+        
+        let margin = scrollView.bounds.width / 7
+        returnButtonCenterX.constant -= margin
+        closeButtonCenterX.constant += margin
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.layoutIfNeeded()
+        }
     }
     
     // 关闭
@@ -106,7 +123,7 @@ extension WBComposeTypeView{
         scrollView.isPagingEnabled = true
         
         // 禁用滚动
-        //scrollView.isScrollEnabled = false
+        scrollView.isScrollEnabled = false
     }
     
     
@@ -124,7 +141,7 @@ extension WBComposeTypeView{
             let btn = WBComposeTypeButton.composeTypeButton(imageName: buttonInfo[i]["imageName"]!, lable: buttonInfo[i]["title"]!)
             
             v.addSubview(btn)
-            
+
             //添加监听方法
             if let actionName = buttonInfo[i]["actionName"] {
                 btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)

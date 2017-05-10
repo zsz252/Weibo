@@ -10,6 +10,20 @@ import UIKit
 
 class WBComposeTypeView: UIView {
 
+    let buttonInfo = [
+        ["imageName":"error_48px_1201052_easyicon.net","title":"文字"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"照片/视频"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"长微博"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"签到"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"点评"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"更多","actionName":"clickMore"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"好友圈"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"微博相机"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"音乐"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"拍摄"]
+    ]
+    
+    
     @IBOutlet weak var scrollView: UIScrollView!
 //    override init(frame: CGRect) {
 //        super.init(frame: UIScreen.main.bounds)
@@ -47,6 +61,11 @@ class WBComposeTypeView: UIView {
     }
     
     func click(){
+        
+    }
+    
+    //点击更多按钮
+    func clickMore(){
         
     }
     
@@ -98,14 +117,18 @@ extension WBComposeTypeView{
         // 从 idx 开始添加6个按钮
         for i in idx..<(idx + count){
             
-            if i>=10{
+            if i >= buttonInfo.count{
                 break
             }
             
-            let btn = WBComposeTypeButton.composeTypeButton(imageName: "error_48px_1201052_easyicon.net", lable: "文字")
+            let btn = WBComposeTypeButton.composeTypeButton(imageName: buttonInfo[i]["imageName"]!, lable: buttonInfo[i]["title"]!)
             
             v.addSubview(btn)
             
+            //添加监听方法
+            if let actionName = buttonInfo[i]["actionName"] {
+                btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
+            }
         }
         
         // 遍历视图的子视图，布局按钮

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 class WBComposeTypeView: UIView {
 
@@ -64,6 +65,9 @@ class WBComposeTypeView: UIView {
         
         // 添加视图
         vc.view.addSubview(self)
+        
+        //开始动画
+        showCurrentView()
     }
     
     func click(){
@@ -184,5 +188,19 @@ extension WBComposeTypeView{
             
             //print("\(i)  \(x)  \(y)")
         }
+    }
+}
+
+// MARK: - 动画方法扩展
+extension WBComposeTypeView{
+    
+    func showCurrentView(){
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        
+        anim?.fromValue = 0
+        anim?.toValue = 1
+        anim?.duration = 2
+        
+        pop_add(anim, forKey: nil)
     }
 }

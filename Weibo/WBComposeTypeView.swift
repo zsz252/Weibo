@@ -77,6 +77,8 @@ class WBComposeTypeView: UIView {
     //点击更多按钮
     func clickMore(){
         
+        self.isUserInteractionEnabled = false
+        
         scrollView.setContentOffset(CGPoint(x: scrollView.bounds.width, y: 0), animated: true)
         
         returnButton.isHidden = false
@@ -85,13 +87,18 @@ class WBComposeTypeView: UIView {
         returnButtonCenterX.constant -= margin
         closeButtonCenterX.constant += margin
         
-        UIView.animate(withDuration: 0.5) { 
+        UIView.animate(withDuration: 0.5, animations: { 
             self.layoutIfNeeded()
+            }) { (_) in
+                self.isUserInteractionEnabled = true
         }
+        
     }
     
     //点击返回按钮
     @IBAction func clickReturn(_ sender: AnyObject) {
+        
+        self.isUserInteractionEnabled = false
         
         scrollView.setContentOffset(CGPoint(x:0,y:0), animated: true)
         
@@ -107,6 +114,8 @@ class WBComposeTypeView: UIView {
             }) { (_) in
                 self.returnButton.alpha = 1
                 self.returnButton.isHidden = true
+                
+                self.isUserInteractionEnabled = true
         }
         
     }

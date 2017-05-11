@@ -203,13 +203,49 @@ extension WBComposeTypeView{
 // MARK: - 动画方法扩展
 extension WBComposeTypeView{
     
+    //动画显示当前视图
     func showCurrentView(){
+        //创建动画
         let anim = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
         
         anim?.fromValue = 0
         anim?.toValue = 1
-        anim?.duration = 2
+        anim?.duration = 0.25
         
+        //添加到视图
         pop_add(anim, forKey: nil)
+        
+        //添加按钮动画
+        showButtons()
+    }
+    
+    //弹力显示所有按钮
+    func showButtons(){
+        
+        // 获取 scrollview 的子视图的第0个视图
+        let v = scrollView.subviews[0]
+        
+        // 遍历所有按钮
+        for (i,btn) in v.subviews.enumerated(){
+            
+            //创建动画
+            let anim = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
+            
+            //设置动画属性
+            anim?.fromValue = btn.center.y + 400
+            anim?.toValue = btn.center.y
+            
+            //弹力系数 0~12 默认4
+            anim?.springBounciness = 10
+            //弹力速度 0~20 默认12
+            anim?.springSpeed = 3
+            
+            //设置动画启动时间
+            anim?.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
+            
+            //添加动画
+            btn.pop_add(anim, forKey: nil)
+        }
+        
     }
 }

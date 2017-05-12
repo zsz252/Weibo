@@ -261,7 +261,7 @@ extension WBComposeTypeView{
         
         for (i,btn) in v.subviews.enumerated().reversed(){
             
-            let anim = POPDecayAnimation(propertyNamed: kPOPLayerPositionY)
+            let anim = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
             
             anim?.fromValue = btn.center.y
             anim?.toValue = btn.center.y + 300
@@ -269,7 +269,7 @@ extension WBComposeTypeView{
             // 设置时间
             anim?.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
             
-            anim?.velocity =
+            //anim?.velocity =
             
             btn.layer.pop_add(anim, forKey: nil)
         }

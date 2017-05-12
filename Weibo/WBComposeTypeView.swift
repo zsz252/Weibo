@@ -126,9 +126,25 @@ class WBComposeTypeView: UIView {
         hideButtons()
     }
     
-    func clickButton(btn: WBComposeTypeButton){
+    // 点击按钮
+    func clickButton(button: WBComposeTypeButton){
         
+        // 判断当前显示的视图
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        let v = scrollView.subviews[page]
         
+        // 选择的按钮放大 其余的缩小
+        for btn in v.subviews{
+            
+            let scaleAnim = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+            
+            let scale = (button == btn) ? 2 : 0.2
+            
+            scaleAnim?.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
+            scaleAnim?.duration = 0.5
+            
+            btn.pop_add(scaleAnim, forKey: nil)
+        }
     }
 }
 
@@ -186,7 +202,7 @@ extension WBComposeTypeView{
             if let actionName = buttonInfo[i]["actionName"] {
                 btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
             }else{
-                btn.addTarget(self, action: #selector(clickButton(btn:)), for: .touchUpInside)
+                btn.addTarget(self, action: #selector(clickButton(button:)), for: .touchUpInside)
             }
             
             // 设置类名

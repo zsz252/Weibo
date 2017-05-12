@@ -134,8 +134,9 @@ class WBComposeTypeView: UIView {
         let v = scrollView.subviews[page]
         
         // 选择的按钮放大 其余的缩小
-        for btn in v.subviews{
+        for (i,btn) in v.subviews.enumerated(){
             
+            // 缩放动画
             let scaleAnim = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
             
             let scale = (button == btn) ? 2 : 0.2
@@ -144,6 +145,20 @@ class WBComposeTypeView: UIView {
             scaleAnim?.duration = 0.5
             
             btn.pop_add(scaleAnim, forKey: nil)
+            
+            // 渐变动画
+            let alphaAnim:POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+            
+            alphaAnim.fromValue = 0.2
+            alphaAnim.toValue = 0.5
+            btn.pop_add(alphaAnim, forKey: nil)
+            
+            // 添加动画监听
+            if i == 0 {
+                alphaAnim.completionBlock = { (_,_) in
+                    
+                }
+            }
         }
     }
 }

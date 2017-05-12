@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180F902C1EC60CBB00C595BA /* WBComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */; };
 		18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */; };
 		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
 		18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeViewController.swift; sourceTree = "<group>"; };
 		18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
 		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				1818436F1EBACE5E00AAEDEC /* Compose */,
+				180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */,
 				189875A71E28CF7400BDD953 /* Profile */,
 				189875A61E28CF4000BDD953 /* Discover */,
 				189875A51E28CF2900BDD953 /* Message */,
@@ -619,6 +622,7 @@
 				189875B31E28D11600BDD953 /* WBDiscoverViewController.swift in Sources */,
 				18256DDE1EBF73B8007534D2 /* WBComposeTypeButton.swift in Sources */,
 				1828BEAA1E36366D00C09D79 /* WBNetworkManager.swift in Sources */,
+				180F902C1EC60CBB00C595BA /* WBComposeViewController.swift in Sources */,
 				189875B11E28D10A00BDD953 /* WBMessageViewController.swift in Sources */,
 				181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */,
 				18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */,

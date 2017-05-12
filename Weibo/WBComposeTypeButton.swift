@@ -14,7 +14,8 @@ class WBComposeTypeButton: UIControl {
     
     @IBOutlet weak var titleLable: UILabel!
     
-    
+    // 要展现控制器的类名
+    var clsName:String?
     /// 使用图像名称，标题创建按钮
     ///
     /// - parameter image: 图像

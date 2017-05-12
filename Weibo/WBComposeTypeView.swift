@@ -12,7 +12,7 @@ import pop
 class WBComposeTypeView: UIView {
 
     let buttonInfo = [
-        ["imageName":"error_48px_1201052_easyicon.net","title":"文字"],
+        ["imageName":"error_48px_1201052_easyicon.net","title":"文字","clsName":"WBComposeViewController"],
         ["imageName":"error_48px_1201052_easyicon.net","title":"照片/视频"],
         ["imageName":"error_48px_1201052_easyicon.net","title":"长微博"],
         ["imageName":"error_48px_1201052_easyicon.net","title":"签到"],
@@ -125,6 +125,11 @@ class WBComposeTypeView: UIView {
         //self.removeFromSuperview()
         hideButtons()
     }
+    
+    func clickButton(btn: WBComposeTypeButton){
+        
+        
+    }
 }
 
 
@@ -180,7 +185,12 @@ extension WBComposeTypeView{
             //添加监听方法
             if let actionName = buttonInfo[i]["actionName"] {
                 btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
+            }else{
+                btn.addTarget(self, action: #selector(clickButton(btn:)), for: .touchUpInside)
             }
+            
+            // 设置类名
+            btn.clsName = buttonInfo[i]["clsName"]
         }
         
         // 遍历视图的子视图，布局按钮

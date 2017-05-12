@@ -122,7 +122,8 @@ class WBComposeTypeView: UIView {
     
     // 关闭
     @IBAction func close() {
-        self.removeFromSuperview()
+        //self.removeFromSuperview()
+        hideButtons()
     }
 }
 
@@ -203,6 +204,7 @@ extension WBComposeTypeView{
 // MARK: - 动画方法扩展
 extension WBComposeTypeView{
     
+    //MARK: - 显示部分的动画
     //动画显示当前视图
     func showCurrentView(){
         //创建动画
@@ -232,7 +234,7 @@ extension WBComposeTypeView{
             let anim = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
             
             //设置动画属性
-            anim?.fromValue = btn.center.y + 400
+            anim?.fromValue = btn.center.y + 300
             anim?.toValue = btn.center.y
             
             //弹力系数 0~12 默认4
@@ -245,6 +247,31 @@ extension WBComposeTypeView{
             
             //添加动画
             btn.pop_add(anim, forKey: nil)
+        }
+        
+    }
+    
+    //MARK - :隐藏部分的动画
+    func hideButtons(){
+        
+        //根据contenoffset 判断当前显示的子视图
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        
+        let v = scrollView.subviews[page]
+        
+        for (i,btn) in v.subviews.enumerated().reversed(){
+            
+            let anim = POPDecayAnimation(propertyNamed: kPOPLayerPositionY)
+            
+            anim?.fromValue = btn.center.y
+            anim?.toValue = btn.center.y + 300
+            
+            // 设置时间
+            anim?.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
+            
+            anim?.velocity =
+            
+            btn.layer.pop_add(anim, forKey: nil)
         }
         
     }

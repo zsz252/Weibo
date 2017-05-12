@@ -259,20 +259,46 @@ extension WBComposeTypeView{
         
         let v = scrollView.subviews[page]
         
-        for (i,btn) in v.subviews.enumerated().reversed(){
+        for (i,btn) in v.subviews.enumerated(){
             
             let anim = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
             
             anim?.fromValue = btn.center.y
-            anim?.toValue = btn.center.y + 300
+            anim?.toValue = btn.center.y + 350
             
             // 设置时间
-            anim?.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
+            anim?.beginTime = CACurrentMediaTime() + CFTimeInterval(v.subviews.count - i) * 0.025
             
-            //anim?.velocity =
+            anim?.springSpeed = 3
+            //anim?.springBounciness = 6
             
             btn.layer.pop_add(anim, forKey: nil)
+            
+            // 监听第 0 个按钮的动画 ，是最后一个执行的
+            if i==0 {
+                anim?.completionBlock = { (_,_) in
+                    
+                    self.hideCurrentView()
+                }
+            }
         }
         
+    }
+    
+    
+    /// 隐藏当前视图
+    func hideCurrentView(){
+        
+        let anim:POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        
+        anim.fromValue = 1
+        anim.toValue = 0
+        anim.duration = 0.25
+        
+        pop_add(anim, forKey: nil)
+        
+        anim.completionBlock = { (_,_) in
+            self.removeFromSuperview()
+        }
     }
 }

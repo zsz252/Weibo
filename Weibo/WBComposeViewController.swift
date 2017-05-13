@@ -15,8 +15,16 @@ class WBComposeViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.orange
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "退出", target: self, action: #selector(close))
     }
-
+    
+    func close(){
+        dismiss(animated: true) { 
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -40,7 +40,24 @@ class WBMainViewController: UITabBarController {
         let v = WBComposeTypeView.composeTypeView()
         
         // 显示视图
-        v.show()
+        v.show { [weak v](clsName) in
+            
+            // 展现撰写微博控制器
+            guard let clsName = clsName,
+                let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type
+            else{
+                v?.removeFromSuperview()
+                return
+            }
+            
+            let vc = cls.init()
+            
+            let nav = UINavigationController(rootViewController: vc)
+            
+            self.present(nav, animated: true, completion: {
+                v?.removeFromSuperview()
+            })
+        }
     }
     
     //使用代码控制屏幕方向

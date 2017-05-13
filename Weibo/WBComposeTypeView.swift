@@ -24,6 +24,8 @@ class WBComposeTypeView: UIView {
         ["imageName":"error_48px_1201052_easyicon.net","title":"拍摄"]
     ]
     
+    // 完成回调
+    var completionBlock: ((_ clsName:String?) -> ())?
     
     @IBOutlet weak var scrollView: UIScrollView!
     // 返回按钮X约束
@@ -56,7 +58,9 @@ class WBComposeTypeView: UIView {
     }
     
     // 显示当前视图
-    func show(){
+    func show(completion: @escaping (_ clsName:String?) -> ()){
+        
+        completionBlock = completion
         
         // 将当前视图添加到 根视图控制器
         guard let vc = UIApplication.shared.keyWindow?.rootViewController else {
@@ -127,7 +131,7 @@ class WBComposeTypeView: UIView {
     }
     
     // 点击按钮
-    func clickButton(button: WBComposeTypeButton){
+    func clickButton(selectedButton: WBComposeTypeButton){
         
         // 判断当前显示的视图
         let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
@@ -139,10 +143,10 @@ class WBComposeTypeView: UIView {
             // 缩放动画
             let scaleAnim = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
             
-            let scale = (button == btn) ? 2 : 0.2
+            let scale = (selectedButton == btn) ? 2 : 0.5
             
             scaleAnim?.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
-            scaleAnim?.duration = 0.5
+            scaleAnim?.duration = 0.3
             
             btn.pop_add(scaleAnim, forKey: nil)
             
@@ -157,6 +161,8 @@ class WBComposeTypeView: UIView {
             if i == 0 {
                 alphaAnim.completionBlock = { (_,_) in
                     
+                    //完成回调
+                    self.completionBlock?(selectedButton.clsName)
                 }
             }
         }
@@ -217,7 +223,7 @@ extension WBComposeTypeView{
             if let actionName = buttonInfo[i]["actionName"] {
                 btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
             }else{
-                btn.addTarget(self, action: #selector(clickButton(button:)), for: .touchUpInside)
+                btn.addTarget(self, action: #selector(clickButton(selectedButton:)), for: .touchUpInside)
             }
             
             // 设置类名

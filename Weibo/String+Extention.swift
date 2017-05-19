@@ -11,7 +11,7 @@ import Foundation
 extension String{
     
     // 从当前字符串中提取链接和文博
-    func wb_href() -> () {
+    func wb_href() -> (link:String,text:String)? {
         
         // 匹配方案
         let pattern = "<a href=\"(.*?)\".*?>(.*?)</a>"
@@ -20,11 +20,13 @@ extension String{
         guard let regx = try? NSRegularExpression(pattern: pattern, options: []),
             let reslut = regx.firstMatch(in: self, options: [], range: NSRange(location: 0, length: characters.count))
         else {
-            return
+            return nil
         }
         
         // 获取结果
-        let link = (self as? NSString)?.substring(with: reslut.rangeAt(1))
-        let text = (self as? NSString)?.substring(with: reslut.rangeAt(2))
+        let link = (self as NSString).substring(with: reslut.rangeAt(1))
+        let text = (self as NSString).substring(with: reslut.rangeAt(2))
+        
+        return (link,text)
     }
 }

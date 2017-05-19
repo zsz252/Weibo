@@ -27,7 +27,7 @@ class WBStatusViewModel: CustomStringConvertible{
     
     
     //来源字符串
-    var sourceStr:String?
+    //var sourceStr:String?
     
     var pictureViewSize = CGSize()
     
@@ -72,7 +72,7 @@ class WBStatusViewModel: CustomStringConvertible{
         retweetedText = "@" + (status.retweeted_status?.user?.screen_name ?? "") + ":" + (status.retweeted_status?.text ?? "")
         
         // 设置来源字符串
-        sourceStr = "来自" + (model.source?.wb_href()?.text ?? "")
+        //sourceStr = "来自" + (model.source?.wb_href()?.text ?? "")
         
         // 计算行高
         updateRowHeight()

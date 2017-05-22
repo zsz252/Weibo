@@ -45,6 +45,8 @@
 		182E86A71E28CB55002DED68 /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E86A61E28CB55002DED68 /* WeiboTests.swift */; };
 		182E86B21E28CB55002DED68 /* WeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E86B11E28CB55002DED68 /* WeiboUITests.swift */; };
 		186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186E4CB41E574BF200210405 /* WBNewFeatureView.xib */; };
+		1892A7FD1ED2A0A400E78BDF /* HMEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */; };
+		1892A7FF1ED2A0EA00E78BDF /* WBEmoticonManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */; };
 		189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875A81E28CFF700BDD953 /* WBMainViewController.swift */; };
 		189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */; };
 		189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */; };
@@ -121,6 +123,8 @@
 		182E86B11E28CB55002DED68 /* WeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboUITests.swift; sourceTree = "<group>"; };
 		182E86B31E28CB55002DED68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186E4CB41E574BF200210405 /* WBNewFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBNewFeatureView.xib; sourceTree = "<group>"; };
+		1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMEmoticon.bundle; sourceTree = "<group>"; };
+		1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticonManger.swift; sourceTree = "<group>"; };
 		189875A81E28CFF700BDD953 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationViewController.swift; sourceTree = "<group>"; };
 		189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				182A4A1D1E5BF2360000676E /* UIImageView+WebImage.swift */,
 				181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */,
 				18D542E51ECF3020003814A8 /* String+Extention.swift */,
+				1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */,
+				1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				181871371E5B3A06003C70AC /* WBStatusCellTableViewNormalCell.xib in Resources */,
 				182E869C1E28CB55002DED68 /* LaunchScreen.storyboard in Resources */,
 				18256DE01EBF73F0007534D2 /* WBComposeTypeButton.xib in Resources */,
+				1892A7FD1ED2A0A400E78BDF /* HMEmoticon.bundle in Resources */,
 				186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */,
 				18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */,
 				182E86991E28CB55002DED68 /* Assets.xcassets in Resources */,
@@ -642,6 +649,7 @@
 				1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */,
 				1828BC821EAFAFE60004E205 /* WBRefreshView.swift in Sources */,
 				181ABD031E5E845A0045BC5C /* WBStatusPictureView.swift in Sources */,
+				1892A7FF1ED2A0EA00E78BDF /* WBEmoticonManger.swift in Sources */,
 				18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */,
 				189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */,
 				189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */,

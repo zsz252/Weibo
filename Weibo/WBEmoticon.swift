@@ -43,6 +43,25 @@ class WBEmoticon: NSObject {
         return image
     }
     
+    // 将当前的图像转换生成图像的属性文本
+    func imageText(font:UIFont) -> NSAttributedString {
+        
+        // 判断图像是否存在
+        guard let image = image else {
+            return NSAttributedString(string: "")
+        }
+        
+        let attachment = NSTextAttachment()
+        attachment.image = image
+        
+        let height = font.lineHeight
+        attachment.bounds = CGRect(x: 0, y: -4, width: height, height: height)
+        
+        // 返回图像属性文本
+        return NSAttributedString(attachment: attachment)
+        
+    }
+    
     override var description: String{
         return yy_modelDescription()
     }

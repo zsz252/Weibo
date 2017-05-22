@@ -19,6 +19,30 @@ class WBEmoticon: NSObject {
     // emoj的十六进制编码
     var code:String?
     
+    // 表情模型目录
+    var directory:String?
+    
+    // 图片表情对应图像
+    var image:UIImage?{
+        
+        // 判断表情类型
+        if type{
+            return nil
+        }
+        
+        guard let directory = directory,
+            let png = png,
+            let path = Bundle.main.path(forResource: "HMEmoticon.bundle", ofType: nil),
+            let bundle = Bundle(path: path)
+            else {
+            return nil
+        }
+        
+        let image = UIImage(named: "\(directory)/\(png)", in: bundle, compatibleWith: nil)
+        
+        return image
+    }
+    
     override var description: String{
         return yy_modelDescription()
     }

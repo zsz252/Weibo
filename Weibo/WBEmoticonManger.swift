@@ -23,6 +23,36 @@ class WBEmoticonManager{
     }
 }
 
+// MARK: - 表情符号处理
+extension WBEmoticonManager{
+    
+    
+    /// 根据字符串查找表情符号对应的表情模型
+    ///
+    /// - parameter string: 字符串
+    ///
+    /// - returns: 返回表情模型 可为nil
+    func findEmoticon(string:String) -> WBEmoticon?{
+        
+        // 遍历表情包
+        for p in packages{
+            
+            // 在表情数组中过滤string
+            let result = p.emoticons.filter({ (em) -> Bool in
+                return em.chs == string
+            })
+            
+            // 判断数组的数量
+            if result.count == 1{
+                return result[0]
+            }
+        }
+        
+        return nil
+    }
+    
+}
+
 // MARK: - 表情包数据处理
 extension WBEmoticonManager{
     

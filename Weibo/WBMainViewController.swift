@@ -30,6 +30,8 @@ class WBMainViewController: UITabBarController {
         
         //注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(userLogin(n:)), name: NSNotification.Name(rawValue: WBUserShouldLoginNotification), object: nil)
+        
+        WBEmoticonManager.shared.loadPackages()
     }
     
     //撰写微博

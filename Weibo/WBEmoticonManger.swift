@@ -14,6 +14,9 @@ class WBEmoticonManager{
     // 表情管理器单例
     static let shared = WBEmoticonManager()
     
+    // 表情包的懒加载数组
+    lazy var packages = [WBEmoticonPackage]()
+    
     // 构造函数，使用private使外部无法调用  OC 要重写 allocWithZone
     private init(){
         
@@ -28,12 +31,16 @@ extension WBEmoticonManager{
         guard let path = Bundle.main.path(forResource: "HMEmoticon.bundle", ofType: nil),
             let bundle = Bundle(path: path),
             let plistPath = bundle.path(forResource: "emoticons.plist", ofType: nil),
-            let array = NSArray(contentsOfFile: plistPath) as? [[String:String]]
+            let array = NSArray(contentsOfFile: plistPath) as? [[String:String]],
+            let models = NSArray.yy_modelArray(with: WBEmoticonPackage.classForCoder(), json: array) as? [WBEmoticonPackage]
         else{
             return
             
         }
         
+        // 设置表情包数据
+        packages += models
         
+        print(models)
     }
 }

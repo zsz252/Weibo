@@ -47,6 +47,8 @@
 		186E4CB51E574BF200210405 /* WBNewFeatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186E4CB41E574BF200210405 /* WBNewFeatureView.xib */; };
 		1892A7FD1ED2A0A400E78BDF /* HMEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */; };
 		1892A7FF1ED2A0EA00E78BDF /* WBEmoticonManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */; };
+		1892A8031ED2BD5D00E78BDF /* WBEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A8021ED2BD5D00E78BDF /* WBEmoticon.swift */; };
+		1892A8051ED2C04C00E78BDF /* WBEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A8041ED2C04C00E78BDF /* WBEmoticonPackage.swift */; };
 		189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875A81E28CFF700BDD953 /* WBMainViewController.swift */; };
 		189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */; };
 		189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */; };
@@ -125,6 +127,8 @@
 		186E4CB41E574BF200210405 /* WBNewFeatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBNewFeatureView.xib; sourceTree = "<group>"; };
 		1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMEmoticon.bundle; sourceTree = "<group>"; };
 		1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticonManger.swift; sourceTree = "<group>"; };
+		1892A8021ED2BD5D00E78BDF /* WBEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticon.swift; sourceTree = "<group>"; };
+		1892A8041ED2C04C00E78BDF /* WBEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticonPackage.swift; sourceTree = "<group>"; };
 		189875A81E28CFF700BDD953 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		189875AA1E28D03700BDD953 /* WBNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationViewController.swift; sourceTree = "<group>"; };
 		189875AC1E28D06D00BDD953 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +305,25 @@
 			path = WeiboUITests;
 			sourceTree = "<group>";
 		};
+		1892A8001ED2BCD200E78BDF /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				1892A8011ED2BD1500E78BDF /* Model */,
+				1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */,
+				1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */,
+			);
+			name = Emoticon;
+			sourceTree = "<group>";
+		};
+		1892A8011ED2BD1500E78BDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1892A8041ED2C04C00E78BDF /* WBEmoticonPackage.swift */,
+				1892A8021ED2BD5D00E78BDF /* WBEmoticon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1898759E1E28CEC400BDD953 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +370,7 @@
 		189875A21E28CEF100BDD953 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1892A8001ED2BCD200E78BDF /* Emoticon */,
 				182D776F1E34D4DC00F147EE /* Network */,
 				189875B61E28E2D500BDD953 /* Extension */,
 				182663E51E38F81900942F71 /* WBCommon.swift */,
@@ -410,8 +434,6 @@
 				182A4A1D1E5BF2360000676E /* UIImageView+WebImage.swift */,
 				181A65A11E5C012C001B3D6C /* UIImage+Extension.swift */,
 				18D542E51ECF3020003814A8 /* String+Extention.swift */,
-				1892A7FC1ED2A0A400E78BDF /* HMEmoticon.bundle */,
-				1892A7FE1ED2A0EA00E78BDF /* WBEmoticonManger.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -643,6 +665,7 @@
 				18D542E61ECF3020003814A8 /* String+Extention.swift in Sources */,
 				181FCA721EA7BECC00097373 /* WBRefresh.swift in Sources */,
 				189875B51E28D12100BDD953 /* WBProfileViewController.swift in Sources */,
+				1892A8031ED2BD5D00E78BDF /* WBEmoticon.swift in Sources */,
 				182A4A1C1E5BDE5B0000676E /* WBStatusViewModel.swift in Sources */,
 				181A65A21E5C012C001B3D6C /* UIImage+Extension.swift in Sources */,
 				189875AF1E28D0EE00BDD953 /* WBHomeViewController.swift in Sources */,
@@ -651,6 +674,7 @@
 				181ABD031E5E845A0045BC5C /* WBStatusPictureView.swift in Sources */,
 				1892A7FF1ED2A0EA00E78BDF /* WBEmoticonManger.swift in Sources */,
 				18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */,
+				1892A8051ED2C04C00E78BDF /* WBEmoticonPackage.swift in Sources */,
 				189875AB1E28D03700BDD953 /* WBNavigationViewController.swift in Sources */,
 				189875A91E28CFF700BDD953 /* WBMainViewController.swift in Sources */,
 				181ABD011E5E72B00045BC5C /* WBStatusTarbar.swift in Sources */,

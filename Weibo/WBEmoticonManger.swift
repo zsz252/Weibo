@@ -19,3 +19,21 @@ class WBEmoticonManager{
         
     }
 }
+
+// MARK: - 表情包数据处理
+extension WBEmoticonManager{
+    
+    func loadPackages(){
+        
+        guard let path = Bundle.main.path(forResource: "HMEmoticon.bundle", ofType: nil),
+            let bundle = Bundle(path: path),
+            let plistPath = bundle.path(forResource: "emoticons.plist", ofType: nil),
+            let array = NSArray(contentsOfFile: plistPath) as? [[String:String]]
+        else{
+            return
+            
+        }
+        
+        
+    }
+}

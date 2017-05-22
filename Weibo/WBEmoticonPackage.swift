@@ -15,7 +15,24 @@ class WBEmoticonPackage: NSObject {
     var groupName:String?
     
     // 表情包目录 , 从目录下加载 info.plist
-    var directory:String?
+    var directory:String?{
+        didSet{
+            
+            // 当设置目录时，从目录下加载plist
+            guard let directory = directory,
+                let path = Bundle.main.path(forResource: "HMEmoticon.bundle", ofType: nil),
+                let bundle = Bundle(path: path),
+                let infoPath = bundle.path(forResource: "info.plist", ofType: nil, inDirectory: directory),
+                let array = NSArray(contentsOfFile: infoPath) as? [[String:String]],
+                let models = NSArray.yy_modelArray(with: WBEmoticon.classForCoder(), json: array) as? [WBEmoticon]
+            else {
+                return
+            }
+            
+            emoticons += models
+            print(emoticons)
+        }
+    }
     
     // 懒加载表情包模型的空数组
     // 使用懒加载可避免后续解包

@@ -52,7 +52,7 @@ extension WBEmoticonManager{
         return nil
     }
     
-    func emoticonString(string:String) -> NSAttributedString {
+    func emoticonString(string:String,font:UIFont) -> NSAttributedString {
         
         let attrString = NSMutableAttributedString(string: string)
         
@@ -71,10 +71,12 @@ extension WBEmoticonManager{
             
             if let em = WBEmoticonManager.shared.findEmoticon(string: subString){
                 
-                attrString.replaceCharacters(in: r, with: em.imageText(font: UIFont.boldSystemFont(ofSize: 16)))
+                attrString.replaceCharacters(in: r, with: em.imageText(font: font))
             }
             
         }
+        
+        attrString.addAttributes([NSFontAttributeName:font], range: NSRange.init(location: 0, length: attrString.length))
         
         return attrString
     }

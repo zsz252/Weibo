@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class WBEmoticonManager{
     
@@ -49,6 +50,33 @@ extension WBEmoticonManager{
         }
         
         return nil
+    }
+    
+    func emoticonString(string:String) -> NSAttributedString {
+        
+        let attrString = NSMutableAttributedString(string: string)
+        
+        let pattern = "\\[.*?\\]"
+        
+        guard let regx = try? NSRegularExpression(pattern: pattern, options: []) else{
+            return attrString
+        }
+        
+        let maches = regx.matches(in: string, options: [], range: NSRange.init(location: 0, length: attrString.length))
+        
+        for m in maches.reversed(){
+            
+            let r = m.rangeAt(0)
+            let subString = (attrString.string as NSString).substring(with: r)
+            
+            if let em = WBEmoticonManager.shared.findEmoticon(string: subString){
+                
+                attrString.replaceCharacters(in: r, with: em.imageText(font: UIFont.boldSystemFont(ofSize: 16)))
+            }
+            
+        }
+        
+        return attrString
     }
     
 }

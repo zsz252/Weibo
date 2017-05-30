@@ -25,6 +25,7 @@
 		181ABD011E5E72B00045BC5C /* WBStatusTarbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */; };
 		181ABD031E5E845A0045BC5C /* WBStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ABD021E5E845A0045BC5C /* WBStatusPictureView.swift */; };
 		181ABD051E5E8B2E0045BC5C /* WBStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ABD041E5E8B2E0045BC5C /* WBStatusPicture.swift */; };
+		181B045E1EDD999500D83EAA /* WBLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B045D1EDD999500D83EAA /* WBLable.swift */; };
 		181FCA721EA7BECC00097373 /* WBRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCA711EA7BECC00097373 /* WBRefresh.swift */; };
 		1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */; };
 		1824865D1E3777F90086B40D /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865C1E3777F80086B40D /* WBStatus.swift */; };
@@ -99,6 +100,7 @@
 		181ABD001E5E72B00045BC5C /* WBStatusTarbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusTarbar.swift; sourceTree = "<group>"; };
 		181ABD021E5E845A0045BC5C /* WBStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureView.swift; sourceTree = "<group>"; };
 		181ABD041E5E8B2E0045BC5C /* WBStatusPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPicture.swift; sourceTree = "<group>"; };
+		181B045D1EDD999500D83EAA /* WBLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLable.swift; sourceTree = "<group>"; };
 		181FCA711EA7BECC00097373 /* WBRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRefresh.swift; sourceTree = "<group>"; };
 		1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		1824865C1E3777F80086B40D /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				182D776F1E34D4DC00F147EE /* Network */,
 				189875B61E28E2D500BDD953 /* Extension */,
 				182663E51E38F81900942F71 /* WBCommon.swift */,
+				181B045D1EDD999500D83EAA /* WBLable.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				1818109C1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift in Sources */,
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
+				181B045E1EDD999500D83EAA /* WBLable.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,
 				181ABD051E5E8B2E0045BC5C /* WBStatusPicture.swift in Sources */,
 				181843721EBACE9000AAEDEC /* WBComposeTypeView.swift in Sources */,

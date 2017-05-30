@@ -73,3 +73,33 @@ extension WBLable{
         
     }
 }
+
+// MARK: - 正则表达式函数
+extension WBLable{
+    
+    var urlRanges: [NSRange?]{
+        
+        // 1 正则表达式
+        let pattern = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        
+        guard let regx = try? NSRegularExpression(pattern: pattern, options: []) else{
+            return []
+        }
+        
+        let matchs = regx.matches(in: textStorage.string, options: [], range: NSRange(location: 0, length: textStorage.length))
+        
+        var ranges = [NSRange]()
+        
+        for m in matchs{
+            
+            ranges.append(m.rangeAt(0))
+            
+        }
+        
+        return ranges
+    }
+    
+}
+
+
+

@@ -32,6 +32,8 @@ class WBLable: UILabel {
         
         let range = NSRange(location: 0, length: textStorage.length)
         
+        layoutManager.drawBackground(forGlyphRange: range, at: CGPoint())
+        
         layoutManager.drawGlyphs(forGlyphRange: range, at: CGPoint())
         
     }
@@ -71,6 +73,13 @@ extension WBLable{
             textStorage.setAttributedString(NSAttributedString(string: ""))
         }
         
+        for r in urlRanges{
+            
+            textStorage.addAttributes(
+                [NSForegroundColorAttributeName:UIColor.red,
+                    NSBackgroundColorAttributeName:UIColor.brown
+                ], range: r!)
+        }
     }
 }
 

@@ -9,7 +9,13 @@
 import UIKit
 
 class WBLable: UILabel {
-
+    
+    override var text: String?{
+        didSet{
+            prepareTextContent()
+        }
+    }
+    
     /// 构造函数
     override init(frame: CGRect) {
         super.init(frame: frame)

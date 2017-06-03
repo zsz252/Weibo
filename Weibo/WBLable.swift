@@ -10,6 +10,7 @@ import UIKit
 
 class WBLable: UILabel {
 
+    /// 构造函数
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -18,6 +19,33 @@ class WBLable: UILabel {
         super.init(coder: aDecoder)
         
         prepareTextSystem()
+    }
+    
+    
+    /// 用户交互
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        // 获取点击的位置
+        guard let location = touches.first?.location(in: self) else{
+            return
+        }
+        
+        // 获取位置在文本中的idx
+        let idx = layoutManager.glyphIndex(for: location, in: textContainer)
+        
+        // 判断是否在url中
+        for r in urlRanges {
+            
+            if NSLocationInRange(idx, r!){
+                
+                textStorage.addAttributes([NSForegroundColorAttributeName:UIColor.blue], range: r!)
+                // 需要重绘调用函数
+                setNeedsDisplay()
+            }else{
+                
+            }
+        }
+        
     }
     
     override func layoutSubviews() {
@@ -53,6 +81,9 @@ extension WBLable{
     
     /// 准备文本系统
     func prepareTextSystem(){
+        
+        // 0 开启用户交互
+        isUserInteractionEnabled = true
         
         // 1 准备文本内容
         prepareTextContent()

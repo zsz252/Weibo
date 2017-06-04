@@ -81,6 +81,8 @@ extension WBHomeViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCellTableViewCell
         //2.设置cell
         cell.viewModel = viewModel
+        //设置代理
+        cell.delegate = self
         //3.返回cell
         return cell
     }
@@ -91,6 +93,15 @@ extension WBHomeViewController{
         //返回计算好的行高
         return vm.rowHeight
     }
+}
+
+// MARK: - 设置cell代理
+extension WBHomeViewController:WBStatusCellTableViewCellDelegate{
+    
+    func statusCellDidSelectedURLString(cell: WBStatusCellTableViewCell, urlString: String) {
+        
+    }
+    
 }
 
 // MARK: - 设置界面

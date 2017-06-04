@@ -76,7 +76,8 @@ extension WBEmoticonManager{
             
         }
         
-        attrString.addAttributes([NSFontAttributeName:font,NSForegroundColorAttributeName:UIColor.darkGray], range: NSRange.init(location: 0, length: attrString.length))
+        attrString.addAttributes([NSForegroundColorAttributeName:UIColor.darkGray], range: NSRange(location: 0, length: attrString.length))
+        //attrString.addAttributes([NSFontAttributeName:font], range: NSRange(location: 0, length: attrString.length))
         
         return attrString
     }

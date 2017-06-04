@@ -8,17 +8,35 @@
 
 import UIKit
 
+@objc protocol WBLableDelegate {
+    @objc optional func lableDidSelectedLinkText(lable:WBLable,text:String)
+}
 class WBLable: UILabel {
     
     override var text: String?{
         didSet{
             prepareTextContent()
+            
+            setNeedsDisplay()
         }
     }
+
+    override var attributedText: NSAttributedString?{
+        didSet{
+            prepareTextContent()
+            print(attributedText?.string)
+            
+            setNeedsDisplay()
+        }
+    }
+    
+    var delegate:WBLableDelegate?
     
     /// 构造函数
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        prepareTextSystem()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,6 +45,7 @@ class WBLable: UILabel {
         prepareTextSystem()
     }
     
+
     
     /// 用户交互
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,11 +63,11 @@ class WBLable: UILabel {
             
             if NSLocationInRange(idx, r!){
                 
-                textStorage.addAttributes([NSForegroundColorAttributeName:UIColor.blue], range: r!)
+                textStorage.addAttributes([NSForegroundColorAttributeName:UIColor.red], range: r!)
                 // 需要重绘调用函数
                 setNeedsDisplay()
-            }else{
                 
+                delegate?.lableDidSelectedLinkText?(lable: self, text: self.textStorage.string)
             }
         }
         
@@ -59,6 +78,8 @@ class WBLable: UILabel {
         
         // 设置绘制区域
         textContainer.size = bounds.size
+        
+        //lineBreakMode = .byTruncatingTail
     }
     
     // 绘制文本
@@ -66,10 +87,8 @@ class WBLable: UILabel {
         
         let range = NSRange(location: 0, length: textStorage.length)
         
-        layoutManager.drawBackground(forGlyphRange: range, at: CGPoint())
-        
         layoutManager.drawGlyphs(forGlyphRange: range, at: CGPoint())
-        
+
     }
     
     /// TextKit 的 核心对象
@@ -113,9 +132,7 @@ extension WBLable{
         for r in urlRanges{
             
             textStorage.addAttributes(
-                [NSForegroundColorAttributeName:UIColor.red,
-                    NSBackgroundColorAttributeName:UIColor.brown
-                ], range: r!)
+                [NSForegroundColorAttributeName:UIColor.blue], range: r!)
         }
     }
 }
@@ -126,20 +143,22 @@ extension WBLable{
     var urlRanges: [NSRange?]{
         
         // 1 正则表达式
-        let pattern = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
-        
-        guard let regx = try? NSRegularExpression(pattern: pattern, options: []) else{
-            return []
-        }
-        
-        let matchs = regx.matches(in: textStorage.string, options: [], range: NSRange(location: 0, length: textStorage.length))
+        let patterns = ["[a-zA-Z]*://[a-zA-Z0-9/\\.]*","#.*?#","@[\\u4e00-\\u9fa5a-zA-Z0-9_-]*"]
         
         var ranges = [NSRange]()
         
-        for m in matchs{
+        for pattern in patterns{
+            guard let regx = try? NSRegularExpression(pattern: pattern, options: []) else{
+                return []
+            }
+        
+            let matchs = regx.matches(in: textStorage.string, options: [], range: NSRange(location: 0, length: textStorage.length))
+        
+            for m in matchs{
             
-            ranges.append(m.rangeAt(0))
+                ranges.append(m.rangeAt(0))
             
+            }
         }
         
         return ranges

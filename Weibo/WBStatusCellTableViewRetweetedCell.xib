@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="447" height="487"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jd2-1A-cv6" id="kss-ro-wJJ">
-                <frame key="frameInset" width="447" height="486.5"/>
+                <frame key="frameInset" width="447" height="486"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-Eh-ftb" userLabel="顶部分隔视图">
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_vip" translatesAutoresizingMaskIntoConstraints="NO" id="5jU-QW-xcj" userLabel="认证图标"/>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-ND-gUD" userLabel="正文">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-ND-gUD" userLabel="正文" customClass="WBLable" customModule="Weibo" customModuleProvider="target">
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-8X-n0v" userLabel="被转发微博的背景按钮">
                         <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRX-o1-WOd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRX-o1-WOd" customClass="WBLable" customModule="Weibo" customModuleProvider="target">
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -155,9 +155,9 @@
                 <outlet property="memberIconView" destination="9wO-Ub-dsa" id="ZSU-UR-83h"/>
                 <outlet property="nameLable" destination="Dq0-1t-Aeo" id="Goe-Ez-a1x"/>
                 <outlet property="pictureView" destination="T3x-dQ-OVl" id="AxW-it-Gw9"/>
-                <outlet property="retweetedLable" destination="dRX-o1-WOd" id="DWq-Md-MTI"/>
+                <outlet property="retweetedLable" destination="dRX-o1-WOd" id="e7C-hR-8ro"/>
                 <outlet property="sourceLable" destination="E6V-PQ-yVC" id="S2Y-r2-2Uw"/>
-                <outlet property="statusLable" destination="30a-ND-gUD" id="Vis-Z0-34d"/>
+                <outlet property="statusLable" destination="30a-ND-gUD" id="iwY-0Y-eXg"/>
                 <outlet property="tarBar" destination="6dE-4s-fwQ" id="0VG-0x-dtq"/>
                 <outlet property="timeLable" destination="SGd-21-Xgi" id="Qb1-0h-dFT"/>
                 <outlet property="vipIconView" destination="5jU-QW-xcj" id="yGi-fR-50c"/>

@@ -72,7 +72,7 @@ class WBStatusViewModel: CustomStringConvertible{
         
         
         let originalFont = UIFont.systemFont(ofSize: 15)
-        let retweetFont = UIFont.systemFont(ofSize: 14)
+        let retweetFont = UIFont.systemFont(ofSize: 13)
         
         //微博正文属性文本
         statusAttrText = WBEmoticonManager.shared.emoticonString(string: model.text ?? "", font: originalFont)

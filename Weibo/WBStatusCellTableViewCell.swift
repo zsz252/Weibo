@@ -8,8 +8,13 @@
 
 import UIKit
 
+@objc protocol WBStatusCellTableViewCellDelegate {
+    @objc optional func statusCellDidSelectedURLString(cell:WBStatusCellTableViewCell,urlString:String)
+}
+
 class WBStatusCellTableViewCell: UITableViewCell {
     
+    var delegate:WBStatusCellTableViewCellDelegate?
     // 视图模型
     var viewModel:WBStatusViewModel?{
         didSet{
@@ -51,13 +56,15 @@ class WBStatusCellTableViewCell: UITableViewCell {
     /// 认证图标
     @IBOutlet weak var vipIconView: UIImageView!
     /// 微博正文
-    @IBOutlet weak var statusLable: UILabel!
+    @IBOutlet weak var statusLable: WBLable!
+    //@IBOutlet weak var statusLable: UILabel!
     // 底部工具栏
     @IBOutlet weak var tarBar: WBStatusTarbar!
     // 配图视图
     @IBOutlet weak var pictureView: WBStatusPictureView!
     // 被转发微博的文字
-    @IBOutlet weak var retweetedLable: UILabel?
+    @IBOutlet weak var retweetedLable: WBLable!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,12 +78,24 @@ class WBStatusCellTableViewCell: UITableViewCell {
         
         // 使用 栅格化 注意重新指定分辨率 
         self.layer.rasterizationScale = UIScreen.main.scale
+        
+        statusLable.delegate = self
+        retweetedLable.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+}
+
+extension WBStatusCellTableViewCell:WBLableDelegate{
+    
+    func lableDidSelectedLinkText(lable: WBLable, text: String) {
+        
+        delegate?.statusCellDidSelectedURLString?(cell: self, urlString: text)
     }
     
 }

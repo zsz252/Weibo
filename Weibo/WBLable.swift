@@ -11,6 +11,7 @@ import UIKit
 @objc protocol WBLableDelegate {
     @objc optional func lableDidSelectedLinkText(lable:WBLable,text:String)
 }
+
 class WBLable: UILabel {
     
     override var text: String?{
@@ -67,7 +68,7 @@ class WBLable: UILabel {
                 // 需要重绘调用函数
                 setNeedsDisplay()
                 
-                delegate?.lableDidSelectedLinkText?(lable: self, text: self.textStorage.string)
+                delegate?.lableDidSelectedLinkText?(lable: self, text: (textStorage.string as NSString).substring(with: r!))
             }
         }
         

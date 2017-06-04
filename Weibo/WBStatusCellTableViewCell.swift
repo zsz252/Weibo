@@ -63,7 +63,7 @@ class WBStatusCellTableViewCell: UITableViewCell {
     // 配图视图
     @IBOutlet weak var pictureView: WBStatusPictureView!
     // 被转发微博的文字
-    @IBOutlet weak var retweetedLable: WBLable!
+    @IBOutlet weak var retweetedLable: WBLable?
     
     
     override func awakeFromNib() {
@@ -80,7 +80,8 @@ class WBStatusCellTableViewCell: UITableViewCell {
         self.layer.rasterizationScale = UIScreen.main.scale
         
         statusLable.delegate = self
-        retweetedLable.delegate = self
+        
+        retweetedLable?.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -94,6 +95,10 @@ class WBStatusCellTableViewCell: UITableViewCell {
 extension WBStatusCellTableViewCell:WBLableDelegate{
     
     func lableDidSelectedLinkText(lable: WBLable, text: String) {
+        
+        if !text.hasPrefix("http://"){
+            return
+        }
         
         delegate?.statusCellDidSelectedURLString?(cell: self, urlString: text)
     }

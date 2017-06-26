@@ -11,6 +11,11 @@ import UIKit
 // 撰写微博控制器
 class WBComposeViewController: UIViewController {
 
+    // 文字编辑视图
+    @IBOutlet weak var textView: UITextView!
+    // 底部工具栏
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

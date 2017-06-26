@@ -27,6 +27,8 @@
 		181ABD051E5E8B2E0045BC5C /* WBStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ABD041E5E8B2E0045BC5C /* WBStatusPicture.swift */; };
 		181B045E1EDD999500D83EAA /* WBLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B045D1EDD999500D83EAA /* WBLable.swift */; };
 		181FCA721EA7BECC00097373 /* WBRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCA711EA7BECC00097373 /* WBRefresh.swift */; };
+		182260C21F00E0EF00FC5BBE /* WBComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182260C11F00E0EF00FC5BBE /* WBComposeViewController.xib */; };
+		18239E961EE6FCD400172A0A /* WBWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18239E951EE6FCD400172A0A /* WBWebViewController.swift */; };
 		1824865B1E37490E0086B40D /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */; };
 		1824865D1E3777F90086B40D /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865C1E3777F80086B40D /* WBStatus.swift */; };
 		1824865F1E3779AF0086B40D /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */; };
@@ -102,6 +104,8 @@
 		181ABD041E5E8B2E0045BC5C /* WBStatusPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPicture.swift; sourceTree = "<group>"; };
 		181B045D1EDD999500D83EAA /* WBLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLable.swift; sourceTree = "<group>"; };
 		181FCA711EA7BECC00097373 /* WBRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBRefresh.swift; sourceTree = "<group>"; };
+		182260C11F00E0EF00FC5BBE /* WBComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeViewController.xib; sourceTree = "<group>"; };
+		18239E951EE6FCD400172A0A /* WBWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWebViewController.swift; sourceTree = "<group>"; };
 		1824865A1E37490E0086B40D /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		1824865C1E3777F80086B40D /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		1824865E1E3779AF0086B40D /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 			children = (
 				1818436F1EBACE5E00AAEDEC /* Compose */,
 				180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */,
+				182260C11F00E0EF00FC5BBE /* WBComposeViewController.xib */,
 				189875A71E28CF7400BDD953 /* Profile */,
 				189875A61E28CF4000BDD953 /* Discover */,
 				189875A51E28CF2900BDD953 /* Message */,
@@ -401,6 +406,7 @@
 			children = (
 				181871331E5B3967003C70AC /* StatusCell */,
 				189875AE1E28D0EE00BDD953 /* WBHomeViewController.swift */,
+				18239E951EE6FCD400172A0A /* WBWebViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				182E86991E28CB55002DED68 /* Assets.xcassets in Resources */,
 				1828BC801EAFAFD50004E205 /* WBRefresh.xib in Resources */,
 				18E265371E2E6A2400A5E1C2 /* main.json in Resources */,
+				182260C21F00E0EF00FC5BBE /* WBComposeViewController.xib in Resources */,
 				182E86971E28CB55002DED68 /* Main.storyboard in Resources */,
 				181843741EBAD48100AAEDEC /* WBComposeTypeView.xib in Resources */,
 			);
@@ -684,6 +691,7 @@
 				18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */,
 				1818109C1E632FCD00C1B729 /* WBStatusCellTableViewRetweetedCell.swift in Sources */,
 				189875AD1E28D06D00BDD953 /* WBBaseViewController.swift in Sources */,
+				18239E961EE6FCD400172A0A /* WBWebViewController.swift in Sources */,
 				18FAF9231E38FBB2000CF293 /* WBOAuthViewController.swift in Sources */,
 				181B045E1EDD999500D83EAA /* WBLable.swift in Sources */,
 				182663E61E38F81900942F71 /* WBCommon.swift in Sources */,

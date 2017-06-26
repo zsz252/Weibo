@@ -100,6 +100,12 @@ extension WBHomeViewController:WBStatusCellTableViewCellDelegate{
     
     func statusCellDidSelectedURLString(cell: WBStatusCellTableViewCell, urlString: String) {
         
+        let vc = WBWebViewController()
+        
+        vc.urlString = urlString
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }

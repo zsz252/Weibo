@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBComposeViewController" customModule="Weibo" customModuleProvider="target">
             <connections>
+                <outlet property="sendButton" destination="lgo-Sp-U2s" id="143-em-JKA"/>
                 <outlet property="textView" destination="NhP-XO-Bxk" id="PRA-Pe-iQM"/>
                 <outlet property="toolBar" destination="wYu-7O-ccz" id="1Cg-7V-fpI"/>
                 <outlet property="view" destination="n92-p2-5t3" id="QKe-FG-OPC"/>
@@ -42,5 +43,23 @@
             </constraints>
             <point key="canvasLocation" x="-188" y="-164"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lgo-Sp-U2s">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+            <state key="normal" title="发布">
+                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            </state>
+            <state key="disabled">
+                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted">
+                <color key="titleColor" red="0.98823529409999999" green="0.24313725489999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            </state>
+            <connections>
+                <action selector="pushStatus:" destination="-1" eventType="touchUpInside" id="aLF-Ix-ewn"/>
+            </connections>
+            <point key="canvasLocation" x="162" y="-97"/>
+        </button>
     </objects>
 </document>

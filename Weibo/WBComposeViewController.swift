@@ -16,21 +16,25 @@ class WBComposeViewController: UIViewController {
     // 底部工具栏
     @IBOutlet weak var toolBar: UIToolbar!
     
-    lazy var sendButton:UIButton = {
-        
-        let btn = UIButton()
-        
-        btn.setTitle("发布", for: .normal)
-        btn.setTitleColor(UIColor.orange, for: .normal)
-        btn.setTitleColor(UIColor.gray, for: .disabled)
-        btn.setTitleColor(UIColor.red, for: .highlighted)
-        
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        
-        btn.frame = CGRect(x: 0, y: 0, width: 45, height: 35)
-        
-        return btn
-    }()
+    @IBOutlet var sendButton: UIButton!
+//    lazy var sendButton:UIButton = {
+//        
+//        let btn = UIButton()
+//        
+//        btn.setTitle("发布", for: .normal)
+//        btn.setTitleColor(UIColor.orange, for: .normal)
+//        btn.setTitleColor(UIColor.gray, for: .disabled)
+//        btn.setTitleColor(UIColor.red, for: .highlighted)
+//        
+//        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+//        
+//        btn.frame = CGRect(x: 0, y: 0, width: 45, height: 35)
+//        
+//        return btn
+//    }()
+    @IBAction func pushStatus(_ sender: AnyObject) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

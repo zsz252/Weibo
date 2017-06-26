@@ -16,12 +16,26 @@ class WBComposeViewController: UIViewController {
     // 底部工具栏
     @IBOutlet weak var toolBar: UIToolbar!
     
+    lazy var sendButton:UIButton = {
+        
+        let btn = UIButton()
+        
+        btn.setTitle("发布", for: .normal)
+        btn.setTitleColor(UIColor.orange, for: .normal)
+        btn.setTitleColor(UIColor.gray, for: .disabled)
+        btn.setTitleColor(UIColor.red, for: .highlighted)
+        
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        
+        btn.frame = CGRect(x: 0, y: 0, width: 45, height: 35)
+        
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.orange
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "退出", target: self, action: #selector(close))
+        setupUI()
     }
     
     func close(){
@@ -34,16 +48,20 @@ class WBComposeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+}
+
+extension WBComposeViewController{
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupUI(){
+        view.backgroundColor = UIColor.white
+        
+        setupNavgationBar()
     }
-    */
-
+    
+    func setupNavgationBar(){
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "退出", target: self, action: #selector(close))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: sendButton)
+    }
 }

@@ -87,16 +87,16 @@ extension WBComposeViewController{
             btn.setImage(image, for: .normal)
             
             items.append(UIBarButtonItem(customView: btn))
+            
+            //追加弹簧
+            items.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil))
         }
-        
-        // 追加按钮
-        toolBar.items = items
-        
-        //追加弹簧
-        items.append(UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil))
         
         //删除最后的弹簧
         items.removeLast()
+        
+        // 追加按钮
+        toolBar.items = items
     }
     
     func setupNavgationBar(){

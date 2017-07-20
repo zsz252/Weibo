@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="sendButton" destination="lgo-Sp-U2s" id="143-em-JKA"/>
                 <outlet property="textView" destination="NhP-XO-Bxk" id="PRA-Pe-iQM"/>
+                <outlet property="titleLable" destination="sCL-LJ-4Rm" id="LHT-TF-PNi"/>
                 <outlet property="toolBar" destination="wYu-7O-ccz" id="1Cg-7V-fpI"/>
                 <outlet property="view" destination="n92-p2-5t3" id="QKe-FG-OPC"/>
             </connections>
@@ -41,7 +42,7 @@
                 <constraint firstItem="wYu-7O-ccz" firstAttribute="top" secondItem="NhP-XO-Bxk" secondAttribute="bottom" id="SyL-ax-gYF"/>
                 <constraint firstAttribute="trailing" secondItem="NhP-XO-Bxk" secondAttribute="trailing" id="q6f-Ov-WXA"/>
             </constraints>
-            <point key="canvasLocation" x="-188" y="-164"/>
+            <point key="canvasLocation" x="-341" y="-222"/>
         </view>
         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lgo-Sp-U2s">
             <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
@@ -61,5 +62,50 @@
             </connections>
             <point key="canvasLocation" x="162" y="-97"/>
         </button>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sCL-LJ-4Rm">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <attributedString key="attributedText">
+                <fragment content="发微博">
+                    <attributes>
+                        <font key="NSFont" size="15" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment>
+                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                    <attributes>
+                        <font key="NSFont" size="13" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment content=" ">
+                    <attributes>
+                        <font key="NSFont" size="2" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment>
+                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                    <attributes>
+                        <font key="NSFont" size="13" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment content="zz思卓">
+                    <attributes>
+                        <color key="NSColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+            </attributedString>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="39" y="47.5"/>
+        </label>
     </objects>
 </document>

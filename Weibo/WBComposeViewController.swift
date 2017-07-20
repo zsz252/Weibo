@@ -17,6 +17,9 @@ class WBComposeViewController: UIViewController {
     @IBOutlet weak var toolBar: UIToolbar!
     
     @IBOutlet var sendButton: UIButton!
+    //标题标签
+    @IBOutlet var titleLable: UILabel!
+    
 //    lazy var sendButton:UIButton = {
 //        
 //        let btn = UIButton()
@@ -67,5 +70,7 @@ extension WBComposeViewController{
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "退出", target: self, action: #selector(close))
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: sendButton)
+        
+        navigationItem.titleView = titleLable
     }
 }

@@ -64,6 +64,39 @@ extension WBComposeViewController{
         view.backgroundColor = UIColor.white
         
         setupNavgationBar()
+        setupToolBar()
+    }
+    
+    func setupToolBar(){
+        let itemSettings = [["imageName":"compose1"],
+                            ["imageName":"compose2"],
+                            ["imageName":"compose3"],
+                            ["imageName":"compose4"],
+                            ["imageName":"compose5"]]
+        var items = [UIBarButtonItem]()
+        
+        for s in itemSettings{
+            
+            let imageName = s["imageName"]
+            let image = UIImage(named: imageName!)
+            
+            let btn = UIButton()
+            
+            btn.sizeToFit()
+            
+            btn.setImage(image, for: .normal)
+            
+            items.append(UIBarButtonItem(customView: btn))
+        }
+        
+        // 追加按钮
+        toolBar.items = items
+        
+        //追加弹簧
+        items.append(UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil))
+        
+        //删除最后的弹簧
+        items.removeLast()
     }
     
     func setupNavgationBar(){

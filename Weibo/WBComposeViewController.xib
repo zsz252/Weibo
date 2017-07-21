@@ -12,6 +12,7 @@
                 <outlet property="textView" destination="NhP-XO-Bxk" id="PRA-Pe-iQM"/>
                 <outlet property="titleLable" destination="sCL-LJ-4Rm" id="LHT-TF-PNi"/>
                 <outlet property="toolBar" destination="wYu-7O-ccz" id="1Cg-7V-fpI"/>
+                <outlet property="toolbarBottom" destination="4bo-nJ-dm3" id="7te-rG-6Vr"/>
                 <outlet property="view" destination="n92-p2-5t3" id="QKe-FG-OPC"/>
             </connections>
         </placeholder>
@@ -34,7 +35,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="wYu-7O-ccz" secondAttribute="bottom" id="4bo-nJ-dm3"/>
+                <constraint firstItem="wYu-7O-ccz" firstAttribute="bottom" secondItem="n92-p2-5t3" secondAttribute="bottom" symbolic="YES" id="4bo-nJ-dm3"/>
                 <constraint firstItem="wYu-7O-ccz" firstAttribute="leading" secondItem="n92-p2-5t3" secondAttribute="leading" id="7XO-oQ-wNX"/>
                 <constraint firstAttribute="trailing" secondItem="wYu-7O-ccz" secondAttribute="trailing" id="AFI-vP-ban"/>
                 <constraint firstItem="NhP-XO-Bxk" firstAttribute="leading" secondItem="n92-p2-5t3" secondAttribute="leading" id="Gu0-Tm-lkW"/>

@@ -19,7 +19,8 @@ class WBComposeViewController: UIViewController {
     @IBOutlet var sendButton: UIButton!
     //标题标签
     @IBOutlet var titleLable: UILabel!
-    
+    //底部约束
+    @IBOutlet weak var toolbarBottom: NSLayoutConstraint!
 //    lazy var sendButton:UIButton = {
 //        
 //        let btn = UIButton()
@@ -43,6 +44,27 @@ class WBComposeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        // 键盘监听通知
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardChanged), name:NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    func keyboardChanged(n:NSNotification){
+        //目标rect
+        guard let rect = (n.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ,
+            let duration = (n.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else{
+            return
+        }
+        
+        //设置底部约束的高度
+        let offset = view.bounds.height - rect.origin.y
+        
+         toolbarBottom.constant = offset
+        //更新底部约束
+        UIView.animate(withDuration: duration) { 
+            self.view.layoutIfNeeded()
+        }
+
     }
     
     func close(){

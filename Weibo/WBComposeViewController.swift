@@ -92,11 +92,24 @@ class WBComposeViewController: UIViewController {
 
 }
 
+
+// MARK: - UITextViewDelegate
+extension WBComposeViewController:UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        sendButton.isEnabled = textView.hasText
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        sendButton.isEnabled = textView.hasText
+    }
+}
+
+// MARK: - 设置ui
 extension WBComposeViewController{
     
     func setupUI(){
         view.backgroundColor = UIColor.white
-        
+
         setupNavgationBar()
         setupToolBar()
     }

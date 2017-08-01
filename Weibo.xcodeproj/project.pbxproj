@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180F902C1EC60CBB00C595BA /* WBComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */; };
+		1811AE281F30AFAF008D3689 /* WBComposeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811AE271F30AFAF008D3689 /* WBComposeTextView.swift */; };
 		18163AF81E55ED0F005CEEB3 /* WBWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */; };
 		18163AFA1E55ED9E005CEEB3 /* WBNewFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */; };
 		18163AFC1E560387005CEEB3 /* WBWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */; };
@@ -85,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		180F902B1EC60CBB00C595BA /* WBComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeViewController.swift; sourceTree = "<group>"; };
+		1811AE271F30AFAF008D3689 /* WBComposeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTextView.swift; sourceTree = "<group>"; };
 		18163AF71E55ED0F005CEEB3 /* WBWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBWelcomeView.swift; sourceTree = "<group>"; };
 		18163AF91E55ED9E005CEEB3 /* WBNewFeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewFeatureView.swift; sourceTree = "<group>"; };
 		18163AFB1E560387005CEEB3 /* WBWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBWelcomeView.xib; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				181843731EBAD48100AAEDEC /* WBComposeTypeView.xib */,
 				18256DDD1EBF73B8007534D2 /* WBComposeTypeButton.swift */,
 				18256DDF1EBF73F0007534D2 /* WBComposeTypeButton.xib */,
+				1811AE271F30AFAF008D3689 /* WBComposeTextView.swift */,
 			);
 			name = ComposeType;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				189875B11E28D10A00BDD953 /* WBMessageViewController.swift in Sources */,
 				181871351E5B39CD003C70AC /* WBStatusCellTableViewCell.swift in Sources */,
 				18189F821E2D0D36003657D4 /* WBVisitorView.swift in Sources */,
+				1811AE281F30AFAF008D3689 /* WBComposeTextView.swift in Sources */,
 				1818C2AE1E2BCD3F005C7289 /* WBDemoViewController.swift in Sources */,
 				1818C2B01E2BDA45005C7289 /* UIBarButtonItem+Extensions.swift in Sources */,
 				182E86921E28CB55002DED68 /* AppDelegate.swift in Sources */,
